@@ -1,5 +1,5 @@
 /* =========================================================================
-   M&M Fufffens Consulting AB — application layer.
+   M&M Fufffel Consulting AB — application layer.
    Vanilla JS, no framework. Reads window.MMF (content/services.js) and
    renders a hash-routed, data-driven experience. Progressive enhancement:
    index.html ships a readable no-JS fallback that this script replaces.
@@ -118,7 +118,7 @@
           "</div>" +
         "</div>" +
         '<figure class="hero__logo">' +
-          '<img src="' + esc(BRAND.logo) + '" width="512" height="509" alt="M\u00b2 Fufffens \u2014 M&M Fufffens Consulting AB logo" />' +
+          '<img src="' + esc(BRAND.logo) + '" width="512" height="509" alt="M\u00b2 Fufffel \u2014 M&M Fufffel Consulting AB logo" />' +
           '<figcaption>' + esc(BRAND.tagline2) + "</figcaption>" +
         "</figure>" +
       "</div></section>";
@@ -192,7 +192,7 @@
           '<a class="work-card__media" href="' + esc(w.pdf) + '" target="_blank" rel="noopener" ' +
             'aria-label="Open the ' + esc(w.title) + ' onepager (PDF, opens in a new tab)">' +
             '<img loading="lazy" src="' + esc(w.cover) + '" width="706" height="924" ' +
-              'alt="Cover of the ' + esc(w.title) + ' onepager delivered by M&M Fufffens Consulting AB" />' +
+              'alt="Cover of the ' + esc(w.title) + ' onepager delivered by M&M Fufffel Consulting AB" />' +
             '<span class="work-card__pill">PDF \u2197</span>' +
           "</a>" +
           '<div class="work-card__body">' +
@@ -278,7 +278,7 @@
 
     return (
       '<section class="detail__top" style="--accent:' + esc(s.accent) + '"><div class="wrap">' +
-        '<a class="back-link" href="#/">\u2190 M&M Fufffens portfolio</a>' +
+        '<a class="back-link" href="#/">\u2190 M&M Fufffel portfolio</a>' +
         '<p class="eyebrow hero__eyebrow mt-2">' + esc(s.eyebrow) + "</p>" +
         '<h1 class="detail__title">' + esc(s.name) + "</h1>" +
         '<p class="detail__headline">' + esc(s.headline) + "</p>" +
@@ -384,7 +384,7 @@
       var svc = dlg.querySelector("#cta-service").value;
       var msg = (dlg.querySelector("#cta-msg").value || "We need alignment. Details pending.").trim();
       var subject = "Alignment request: " + svc;
-      var body = "Hello M&M Fufffens Consulting AB,\n\n" + msg +
+      var body = "Hello M&M Fufffel Consulting AB,\n\n" + msg +
         "\n\nRequested service: " + svc +
         "\n\nRegards,\n" + name +
         "\n\n(Meta-ETA\u2122 for your reply: after coffee.)";

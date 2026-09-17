@@ -1,8 +1,8 @@
-# M&M Fufffens Consulting AB
+# M&M Fufffel Consulting AB
 
 > We turn ambiguity into alignment, alignment into slides, and slides into further ambiguity.
 
-A **fictional, satirical** consulting website for **M&M Fufffens Consulting AB** — a send-up of
+A **fictional, satirical** consulting website for **M&M Fufffel Consulting AB** — a send-up of
 consulting language, AI hype, governance, estimation and collective confusion. Polished and premium
 at first glance; increasingly absurd on closer reading. Powered by **Convincing Nonsense™** and the
 flagship **Meta-ETA™**.
@@ -52,13 +52,14 @@ Then check:
 - **Keyboard focus** is visible; the CTA dialog traps and restores focus; `Esc` closes it.
 - **Reduced motion**: enable "Reduce motion" in the OS — the marquee and mug rotation stop.
 - **Print/PDF** (Cmd/Ctrl+P): the background stays dark and text stays light.
-- Spelling: **"Fufffens" has exactly three f's** everywhere; ™ and ² symbols intact.
+- Spelling: **"Fufffel" has exactly three f's** everywhere; ™ and ² symbols intact.
 
 A quick spelling guard:
 
 ```bash
-# should print matches; there should be NO "Fuffens" (two f) or "Fuffffens" (four f)
-grep -rn "Fuffens\|Fuffffens" . && echo "SPELLING ERROR" || echo "spelling ok"
+# There should be NO "Fuffel" (two f) or "Fuffffel" (four f), and no leftover "Fufffens".
+grep -rnE "Fuffel|Fuffffel|Fufffens" --include="*.html" --include="*.js" --include="*.css" . \
+  && echo "SPELLING ERROR" || echo "spelling ok"
 ```
 
 ## Add a new service
@@ -75,7 +76,7 @@ See `.kiro/steering/mm-fufffens-design-system.md` for the full design system and
 
 ## Disclaimers
 
-- **Fictional company.** M&M Fufffens Consulting AB, its services, trademarks and metrics are
+- **Fictional company.** M&M Fufffel Consulting AB, its services, trademarks and metrics are
   invented for satire. Nothing here is real advice or affiliated with any real organisation.
 - **Responsible drinking.** The "Afterwork" offering is fictional. Enjoy alcohol responsibly, only
   if of legal drinking age, and never drink and drive. No health or performance benefits are implied.

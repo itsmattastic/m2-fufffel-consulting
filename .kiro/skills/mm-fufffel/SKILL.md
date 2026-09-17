@@ -1,17 +1,17 @@
 ---
-name: mm-fufffens
-description: Design-system and content rules for the fictional M&M Fufffens Consulting AB satire website. Use when creating, editing or extending the M&M Fufffens site (services, cards, hero, CTA, print styles) so the visual language, three-f "Fufffens" spelling, and data-driven service model stay consistent.
+name: mm-fufffel
+description: Design-system and content rules for the fictional M&M Fufffel Consulting AB satire website. Use when creating, editing or extending the M&M Fufffel site (services, cards, hero, CTA, print styles) so the visual language, three-f "Fufffel" spelling, and data-driven service model stay consistent.
 ---
 
-# M&M Fufffens design system skill
+# M&M Fufffel design system skill
 
-Operational guidance for the fictional **M&M Fufffens Consulting AB** website. This is a
+Operational guidance for the fictional **M&M Fufffel Consulting AB** website. This is a
 dependency-light vanilla HTML/CSS/JS static site. The full source of truth also lives in
 `.kiro/steering/mm-fufffens-design-system.md` in the site repo — keep the two aligned.
 
 ## Non-negotiables
 
-- **"Fufffens" has three f's, always.** Company name is exactly **M&M Fufffens Consulting AB**.
+- **"Fufffel" has three f's, always.** Company name is exactly **M&M Fufffel Consulting AB**.
 - **Convincing Nonsense™** is the foundational capability; **Meta-ETA™** is the flagship concept.
 - Tone: official at first glance, ridiculous on closer inspection. Affectionate, non-targeted.
 - No real company logos, no implied official affiliation, no real-company performance claims.
@@ -39,7 +39,7 @@ dependency-light vanilla HTML/CSS/JS static site. The full source of truth also 
 
 - `python3 -m http.server 8000`, open the site: no console errors.
 - All services reachable from nav + cards; detail views survive refresh and direct URLs.
-- Three-f "Fufffens" everywhere; ™/² symbols intact.
+- Three-f "Fufffel" everywhere; ™/² symbols intact.
 - 320px → desktop; visible keyboard focus; `prefers-reduced-motion` honoured; PDF print stays dark.
 
 Keep this file concise and operational — do not turn it into README-style documentation.

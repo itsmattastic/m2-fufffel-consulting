@@ -1,11 +1,11 @@
-# M&M Fufffens design system for Kiro
+# M&M Fufffel design system for Kiro
 
 Use this steering guidance whenever creating, editing or extending the fictional
-**M&M Fufffens Consulting AB** website in this repository.
+**M&M Fufffel Consulting AB** website in this repository.
 
 ## Brand rules
 
-- Write **M&M Fufffens Consulting AB** exactly. **"Fufffens" has three f's** — always.
+- Write **M&M Fufffel Consulting AB** exactly. **"Fufffel" has three f's** — always.
 - Treat **Convincing Nonsense™** as the foundational capability, not generic filler.
 - Keep **Meta-ETA™** as the trademarked flagship concept.
 - Tone: premium, concise and almost credible at first glance, absurd on closer reading.
@@ -66,7 +66,7 @@ Good quote examples: "An ETA for your ETA", "Teamwork makes the dream work",
 - The **logo** is the blue M² circle with the peeling "FUFFFEL" sticker; it appears in the hero
   lockup with the `Active-active with absolute redundancy since 2026.` caption (`BRAND.tagline2`).
   Note: the merch/logo artwork reads "FUFFEL/FUFFFEL" — that is the visual identity; **all text on
-  the site stays "Fufffens" (three f's)**.
+  the site stays "Fufffel" (three f's)**.
 - **"Some of our work"** lives in the `WORK` array in `content/services.js`: each item has a
   `cover` (a PDF page preview under `assets/work/`), a `pdf` link (`assets/pdf/`), `client`,
   `blurb`, optional `service` slug and `accent`. Generate covers from a PDF's first page with
@@ -85,6 +85,6 @@ Good quote examples: "An ETA for your ETA", "Teamwork makes the dream work",
 
 - `python3 -m http.server 8000` then open `http://localhost:8000/` — no console errors.
 - Every service reachable from nav and cards; detail views survive refresh and direct links.
-- Verify **"Fufffens" has exactly three f's** and trademarked names keep their ™/² symbols.
+- Verify **"Fufffel" has exactly three f's** and trademarked names keep their ™/² symbols.
 - Mobile (320px) to desktop; visible keyboard focus; reduced-motion honoured.
 - Print/PDF keeps the dark background and readable light text.

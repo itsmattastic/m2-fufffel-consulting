@@ -1,5 +1,5 @@
 /* =========================================================================
-   M&M Fufffens Consulting AB — central content / service data model.
+   M&M Fufffel Consulting AB — central content / service data model.
    ADD NEW OFFERINGS HERE. Do not duplicate page markup elsewhere.
    Every service: slug, name, eyebrow, headline, description, accent,
    modules (3 unless a strong reason), quote, and disclaimer when the
@@ -10,10 +10,10 @@
 (function () {
   "use strict";
 
-  /* Brand-level constants. "Fufffens" — three f's, always. */
+  /* Brand-level constants. "Fufffel" — three f's, always. */
   const BRAND = {
-    legalName: "M&M Fufffens Consulting AB",
-    shortName: "M² Fufffens",
+    legalName: "M&M Fufffel Consulting AB",
+    shortName: "M² Fufffel",
     foundational: "Convincing Nonsense\u2122",
     proposition:
       "We turn ambiguity into alignment, alignment into slides, and slides into further ambiguity.",
@@ -37,7 +37,7 @@
       { quote: "Their Meta-ETA\u2122 for our ETA arrived on time. The ETA did not. Ten out of ten.", who: "Programme Lead, Cloud-Adjacent Initiative (fictional)" },
     ],
     disclaimer:
-      "M&M Fufffens Consulting AB is a fictional company created for satire and internal humour. " +
+      "M&M Fufffel Consulting AB is a fictional company created for satire and internal humour. " +
       "All services, trademarks and metrics are invented. Nothing here is real advice, a real product, " +
       "or affiliated with, endorsed by, or representative of any real organisation.",
   };
@@ -109,7 +109,7 @@
       ],
       quote: {
         text: "None of us are so confused as all of us together.",
-        cite: "M&M Fufffens Consulting AB \u2014 house principle",
+        cite: "M&M Fufffel Consulting AB \u2014 house principle",
       },
       disclaimer:
         "Fictional satire. Not a real methodology and not a substitute for facts, evidence, or thinking.",
@@ -191,7 +191,7 @@
 
     {
       slug: "eta-estimating-service",
-      name: "M2 Fufffens ETA Estimating Service",
+      name: "M2 Fufffel ETA Estimating Service",
       eyebrow: "Estimation",
       badge: "FICTIVE SERVICE",
       headline: "An ETA for your ETA.",
@@ -211,7 +211,7 @@
         { h: "Confidence calibration", p: "We measure our confidence, then measure our confidence in that." },
         { h: "Date-shaped object", p: "A deliverable that looks exactly like a date, minus the commitment." },
       ],
-      quote: { text: "An ETA for your ETA.", cite: "M2 Fufffens ETA Estimating Service" },
+      quote: { text: "An ETA for your ETA.", cite: "M2 Fufffel ETA Estimating Service" },
     },
 
     {
@@ -237,7 +237,7 @@
 
     {
       slug: "dark-cloud-navigator",
-      name: "M2 Fufffens Dark Cloud Navigator\u2122",
+      name: "M2 Fufffel Dark Cloud Navigator\u2122",
       eyebrow: "Navigation",
       badge: "TRADEMARK PENDING*",
       headline: "Helping you through hard times with Convincing Nonsense\u2122.",
@@ -296,7 +296,7 @@
 
     {
       slug: "afterwork",
-      name: "Afterwork by M&M Fufffens Consulting",
+      name: "Afterwork by M&M Fufffel Consulting",
       eyebrow: "Operating model",
       badge: "FICTIVE SERVICE",
       headline: "Teamwork makes the dream work.",
@@ -312,7 +312,7 @@
       points: ["Smoke \u00b7 rye \u00b7 oak \u00b7 pepper \u00b7 caramel \u00b7 cross-functional warmth."],
       quote: {
         text: "Two countries, one flight, zero action items.",
-        cite: "Afterwork by M&M Fufffens Consulting",
+        cite: "Afterwork by M&M Fufffel Consulting",
       },
       disclaimer:
         "Fictional and for humour only. Please enjoy alcohol responsibly and only if you are of legal " +
@@ -406,7 +406,7 @@
       accent: "#7be0c2",
     },
     {
-      title: "M&M Fufffens \u2014 Company Overview",
+      title: "M&M Fufffel \u2014 Company Overview",
       client: "For prospects deciding whether to align with us",
       blurb: "The full portfolio in one confident onepager: ambiguity in, alignment out, slides throughout. Convincing Nonsense\u2122 on every page.",
       cover: "assets/work/work-overview.jpg",
@@ -423,14 +423,14 @@
       tagline: "Wear the workstream.",
       note: "Caps, mugs and one-liners engineered for busy people. Perfect gifts, plausible deniability included.",
       img: "assets/merch.jpg",
-      alt: "M\u00b2 Fufffens branded cap and coffee mugs with slogans like 'We turn complexity into a confident slide.'",
+      alt: "M\u00b2 Fufffel branded cap and coffee mugs with slogans like 'We turn complexity into a confident slide.'",
     },
     {
       title: "Executive Decision Fuel",
       tagline: "Small candy. Big alignment.",
       note: "Blue M\u00b2 candy stamped DECIDE NOW, VALIDATE LATER, GOOD ENOUGH. Same great taste, lower accountability.",
       img: "assets/candy.jpg",
-      alt: "M\u00b2 Fufffens branded blue candy in bowls and sachets reading 'Please take a Fufffens' and 'Executive decision fuel.'",
+      alt: "M\u00b2 Fufffel branded blue candy in bowls and sachets reading 'Please take a Fufffel' and 'Executive decision fuel.'",
     },
   ];
 
