@@ -264,6 +264,37 @@
     },
 
     {
+      slug: "inner-excellence-realignment",
+      name: "Inner Excellence Realignment\u2122",
+      eyebrow: "Personal excellence",
+      badge: "TRADEMARK PENDING*",
+      headline: "Find your inner you. Then bring it into alignment.",
+      description:
+        "Personal excellence, consulting-style: we help you become your most strategically actualised " +
+        "self by applying Convincing Nonsense\u2122 to the one stakeholder you can never escalate away \u2014 you.",
+      accent: "#63d7c2",
+      modules: [
+        { h: "Locate the inner you", p: "Deep reflection (one workshop, two sticky notes) to find the you that was there all along, ideally." },
+        { h: "Reframe the inner you", p: "Every weakness rebranded as a \u201cdevelopment area with momentum.\u201d Nothing is broken; everything is emerging." },
+        { h: "Excel the inner you", p: "Ship the improved you now, validate later. If challenged, cite your ongoing personal transformation programme." },
+      ],
+      formula: "you = you \u00d7 (tighter framing + softer deadlines) \u00f7 awkward self-reflection",
+      points: [
+        "Same person. New narrative. Now with a maturity level.",
+        "Executive presence-ish: pause meaningfully, escalate accordingly.",
+        "Meta-ETA\u2122 for when the improved you will finally arrive.",
+      ],
+      quote: {
+        text: "Be the change you want to defer to next quarter.",
+        cite: "Inner Excellence Realignment\u2122 \u2014 self-guided thought leadership",
+      },
+      disclaimer:
+        "Fictional satire \u2014 not real coaching, therapy, medical, mental-health, career or life advice, " +
+        "and it will not actually improve you. For genuine personal growth or wellbeing support, talk to " +
+        "real, qualified humans.",
+    },
+
+    {
       slug: "afterwork",
       name: "Afterwork by M&M Fufffens Consulting",
       eyebrow: "Operating model",
@@ -311,6 +342,15 @@
   /* ---- "Some of our work": real onepagers delivered to (delighted) clients. ---- */
   /* Each has a cover image (a PDF page preview) and links to the full PDF.        */
   const WORK = [
+    {
+      title: "Inner Excellence Realignment\u2122",
+      client: "For a high performer who needed a personal roadmap",
+      blurb: "Find your inner you, then bring it into alignment. We rebranded their flaws as \u201cedges,\u201d compressed the inner monologue to three bullets, and shipped You 2.0.",
+      cover: "assets/work/work-inner-excellence.jpg",
+      pdf: "assets/pdf/inner-excellence.pdf",
+      service: "inner-excellence-realignment",
+      accent: "#63d7c2",
+    },
     {
       title: "Meta-ETA\u2122 Estimating Service",
       client: "For a leadership team that needed a date, not an answer",
