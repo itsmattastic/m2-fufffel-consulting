@@ -58,8 +58,23 @@ Good quote examples: "An ETA for your ETA", "Teamwork makes the dream work",
 6. Run the checks below, then manually verify mobile, keyboard focus, reduced motion and PDF print.
 7. Keep the fictional-satire disclaimer visible where appropriate.
 
-## Guardrails
+## Assets, logo & "Some of our work"
 
+- Ship only **web-optimized** copies under `assets/` (JPEG via `sips`). Keep raw originals in
+  `res/` (gitignored). Logo: `assets/logo.jpg` (+ `assets/logo-sm.jpg`). Merch/candy photos:
+  `assets/merch.jpg`, `assets/candy.jpg`.
+- The **logo** is the blue M² circle with the peeling "FUFFFEL" sticker; it appears in the hero
+  lockup with the `Active-active with absolute redundancy since 2026.` caption (`BRAND.tagline2`).
+  Note: the merch/logo artwork reads "FUFFEL/FUFFFEL" — that is the visual identity; **all text on
+  the site stays "Fufffens" (three f's)**.
+- **"Some of our work"** lives in the `WORK` array in `content/services.js`: each item has a
+  `cover` (a PDF page preview under `assets/work/`), a `pdf` link (`assets/pdf/`), `client`,
+  `blurb`, optional `service` slug and `accent`. Generate covers from a PDF's first page with
+  `qlmanage -t -s 1000 -o <dir> <pdf>` then `sips` to JPEG; crop ~42px top / 34px bottom to remove
+  browser print chrome. Add both the data entry AND a matching `<noscript>` fallback card.
+- Merch/candy showcase = `SHOWCASE` array; fictional client quotes = `BRAND.testimonials`.
+
+## Guardrails
 - Keep the "official at first glance, ridiculous on closer inspection" tone.
 - Do not introduce a framework, font provider, tracker or new design language without a
   repository-level reason. This is dependency-light vanilla HTML/CS/JS.

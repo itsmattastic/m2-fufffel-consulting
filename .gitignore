@@ -4,3 +4,6 @@ Thumbs.db
 *.swp
 .idea/
 .vscode/
+
+# Raw source material (originals). Web-optimized copies live in assets/.
+res/

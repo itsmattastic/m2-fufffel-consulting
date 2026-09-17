@@ -27,6 +27,15 @@
       "Confidence without the administrative burden of certainty.",
     ],
     contactEmail: "alignment@fufffens.example",
+    logo: "assets/logo.jpg",
+    logoSmall: "assets/logo-sm.jpg",
+    tagline2: "Active-active with absolute redundancy since 2026.",
+    // Entirely fictional "happy customers".
+    testimonials: [
+      { quote: "We came in confused. We left aligned. We are, admittedly, still confused \u2014 but together.", who: "VP of Directional Certainty, a Very Large Enterprise (fictional)" },
+      { quote: "The deck was ready before the decision. Frankly, before the question.", who: "Head of Momentum, Undisclosed Steering Group (fictional)" },
+      { quote: "Their Meta-ETA\u2122 for our ETA arrived on time. The ETA did not. Ten out of ten.", who: "Programme Lead, Cloud-Adjacent Initiative (fictional)" },
+    ],
     disclaimer:
       "M&M Fufffens Consulting AB is a fictional company created for satire and internal humour. " +
       "All services, trademarks and metrics are invented. Nothing here is real advice, a real product, " +
@@ -299,5 +308,91 @@
     },
   ];
 
-  window.MMF = { BRAND, METHOD, SERVICES, MUG_MESSAGES };
+  /* ---- "Some of our work": real onepagers delivered to (delighted) clients. ---- */
+  /* Each has a cover image (a PDF page preview) and links to the full PDF.        */
+  const WORK = [
+    {
+      title: "Meta-ETA\u2122 Estimating Service",
+      client: "For a leadership team that needed a date, not an answer",
+      blurb: "How long will it take to estimate how long it will take? We delivered a single, confident-looking number and a plan to defend it.",
+      cover: "assets/work/work-meta-eta.jpg",
+      pdf: "assets/pdf/meta-eta.pdf",
+      service: "meta-eta",
+      accent: "#ff9d3d",
+    },
+    {
+      title: "OSG Slide Generating Service",
+      client: "For a steering group with more dashboards than decisions",
+      blurb: "Scattered dashboards and shifting criteria compressed into one executive-ready narrative \u2014 before the next meeting created three new versions.",
+      cover: "assets/work/work-osg.jpg",
+      pdf: "assets/pdf/osg.pdf",
+      service: "osg-slide-generating-service",
+      accent: "#ff6fae",
+    },
+    {
+      title: "Dark Cloud Navigator\u2122",
+      client: "For a programme going through a genuinely cloudy quarter",
+      blurb: "Executive weather briefings and resilience narratives that kept everyone moving. Directional certainty, weather permitting.",
+      cover: "assets/work/work-dark-cloud-navigator.jpg",
+      pdf: "assets/pdf/dark-cloud-navigator.pdf",
+      service: "dark-cloud-navigator",
+      accent: "#9b8cff",
+    },
+    {
+      title: "Afterwork Operating Model",
+      client: "For two teams who believed in cross-border synergy",
+      blurb: "German rauch lager meets Finnish rye whisky. No one asked whether the interfaces were compatible; we simply poured forward.",
+      cover: "assets/work/work-afterwork.jpg",
+      pdf: "assets/pdf/afterwork.pdf",
+      service: "afterwork",
+      accent: "#e0a35c",
+    },
+    {
+      title: "Coffee Mug Service \u2014 MugOps",
+      client: "For an office that runs on caffeine and slogans",
+      blurb: "A managed wall of spot-on mug messages, delivered warm and suspiciously on-message. This meeting could have been a mug.",
+      cover: "assets/work/work-coffee-mug.jpg",
+      pdf: "assets/pdf/coffee-mug.pdf",
+      service: "coffee-mug-service",
+      accent: "#ff7a59",
+    },
+    {
+      title: "Union Alignment Nonsense Engine\u2122",
+      client: "For a foundational pillar that needed reassuring branding",
+      blurb: "Dialogue, mandate and listening packaged into modules that sound like progress. Everyone was heard; we have a certificate to prove it.",
+      cover: "assets/work/work-union.jpg",
+      pdf: "assets/pdf/union.pdf",
+      service: "union-alignment-nonsense-engine",
+      accent: "#7be0c2",
+    },
+    {
+      title: "M&M Fufffens \u2014 Company Overview",
+      client: "For prospects deciding whether to align with us",
+      blurb: "The full portfolio in one confident onepager: ambiguity in, alignment out, slides throughout. Convincing Nonsense\u2122 on every page.",
+      cover: "assets/work/work-overview.jpg",
+      pdf: "assets/pdf/overview.pdf",
+      service: "convincing-nonsense",
+      accent: "#c6ff3a",
+    },
+  ];
+
+  /* ---- Merch showcase: what happy customers actually receive. ---- */
+  const SHOWCASE = [
+    {
+      title: "The Merch Kit",
+      tagline: "Wear the workstream.",
+      note: "Caps, mugs and one-liners engineered for busy people. Perfect gifts, plausible deniability included.",
+      img: "assets/merch.jpg",
+      alt: "M\u00b2 Fufffens branded cap and coffee mugs with slogans like 'We turn complexity into a confident slide.'",
+    },
+    {
+      title: "Executive Decision Fuel",
+      tagline: "Small candy. Big alignment.",
+      note: "Blue M\u00b2 candy stamped DECIDE NOW, VALIDATE LATER, GOOD ENOUGH. Same great taste, lower accountability.",
+      img: "assets/candy.jpg",
+      alt: "M\u00b2 Fufffens branded blue candy in bowls and sachets reading 'Please take a Fufffens' and 'Executive decision fuel.'",
+    },
+  ];
+
+  window.MMF = { BRAND, METHOD, SERVICES, MUG_MESSAGES, WORK, SHOWCASE };
 })();

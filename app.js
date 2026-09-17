@@ -100,21 +100,27 @@
     var refrains = BRAND.refrains.map(function (r) { return "<span>" + esc(r) + "</span>"; }).join("");
 
     var hero =
-      '<section class="hero"><div class="wrap">' +
-        '<p class="eyebrow hero__eyebrow">' + esc(BRAND.legalName) + "</p>" +
-        '<h1 class="hero__title">We turn ambiguity into <span class="hl">alignment</span>.</h1>' +
-        '<p class="hero__prop">' + esc(BRAND.proposition) + "</p>" +
-        '<p class="lede">' + esc(BRAND.tagline) + " Powered by <strong>" + esc(BRAND.foundational) +
-          "</strong>, our foundational capability.</p>" +
-        '<div class="hero__actions">' +
-          '<button class="btn btn--primary" data-open-cta>Request an alignment</button>' +
-          '<a class="btn btn--ghost" href="#/service/convincing-nonsense">Meet Convincing Nonsense\u2122</a>' +
+      '<section class="hero"><div class="wrap hero__grid">' +
+        '<div class="hero__copy">' +
+          '<p class="eyebrow hero__eyebrow">' + esc(BRAND.legalName) + "</p>" +
+          '<h1 class="hero__title">We turn ambiguity into <span class="hl">alignment</span>.</h1>' +
+          '<p class="hero__prop">' + esc(BRAND.proposition) + "</p>" +
+          '<p class="lede">' + esc(BRAND.tagline) + " Powered by <strong>" + esc(BRAND.foundational) +
+            "</strong>, our foundational capability.</p>" +
+          '<div class="hero__actions">' +
+            '<button class="btn btn--primary" data-open-cta>Request an alignment</button>' +
+            '<a class="btn btn--ghost" href="#/service/convincing-nonsense">Meet Convincing Nonsense\u2122</a>' +
+          "</div>" +
+          '<div class="hero__meta">' +
+            '<span class="badge badge--accent">' + esc(BRAND.foundational) + "</span>" +
+            '<span class="badge badge--amber">Meta-ETA\u2122</span>' +
+            '<span class="badge badge--ghost">Fictional \u00b7 satire</span>' +
+          "</div>" +
         "</div>" +
-        '<div class="hero__meta">' +
-          '<span class="badge badge--accent">' + esc(BRAND.foundational) + "</span>" +
-          '<span class="badge badge--amber">Meta-ETA\u2122</span>' +
-          '<span class="badge badge--ghost">Fictional \u00b7 satire</span>' +
-        "</div>" +
+        '<figure class="hero__logo">' +
+          '<img src="' + esc(BRAND.logo) + '" width="512" height="509" alt="M\u00b2 Fufffens \u2014 M&M Fufffens Consulting AB logo" />' +
+          '<figcaption>' + esc(BRAND.tagline2) + "</figcaption>" +
+        "</figure>" +
       "</div></section>";
 
     var marquee =
@@ -171,7 +177,74 @@
 
     var cta = ctaBand();
 
-    return hero + marquee + portfolio + method + about + cta;
+    return hero + marquee + portfolio + workSection() + method + about + cta;
+  }
+
+  /* ---------- "Some of our work" ---------- */
+  function workSection() {
+    var WORK = MMF.WORK || [];
+    var SHOWCASE = MMF.SHOWCASE || [];
+    var testimonials = (BRAND.testimonials || []);
+
+    var cards = WORK.map(function (w) {
+      return (
+        '<article class="work-card fade-in" style="--accent:' + esc(w.accent || "var(--acid)") + '">' +
+          '<a class="work-card__media" href="' + esc(w.pdf) + '" target="_blank" rel="noopener" ' +
+            'aria-label="Open the ' + esc(w.title) + ' onepager (PDF, opens in a new tab)">' +
+            '<img loading="lazy" src="' + esc(w.cover) + '" width="706" height="924" ' +
+              'alt="Cover of the ' + esc(w.title) + ' onepager delivered by M&M Fufffens Consulting AB" />' +
+            '<span class="work-card__pill">PDF \u2197</span>' +
+          "</a>" +
+          '<div class="work-card__body">' +
+            '<h3 class="work-card__title">' + esc(w.title) + "</h3>" +
+            '<p class="work-card__client">' + esc(w.client) + "</p>" +
+            '<p class="work-card__blurb">' + esc(w.blurb) + "</p>" +
+            '<div class="work-card__foot">' +
+              '<a class="back-link" href="' + esc(w.pdf) + '" target="_blank" rel="noopener">View onepager \u2197</a>' +
+              (w.service ? '<a class="back-link" href="#/service/' + esc(w.service) + '">The service \u2192</a>' : "") +
+            "</div>" +
+          "</div>" +
+        "</article>"
+      );
+    }).join("");
+
+    var showcase = SHOWCASE.map(function (s) {
+      return (
+        '<figure class="showcase">' +
+          '<img loading="lazy" src="' + esc(s.img) + '" alt="' + esc(s.alt) + '" />' +
+          '<figcaption><strong>' + esc(s.tagline) + "</strong> " + esc(s.note) + "</figcaption>" +
+        "</figure>"
+      );
+    }).join("");
+
+    var quotes = testimonials.map(function (t) {
+      return (
+        '<figure class="quote">' + "\u201c" + esc(t.quote) + "\u201d" +
+        '<figcaption>' + esc(t.who) + "</figcaption></figure>"
+      );
+    }).join("");
+
+    return (
+      '<section class="section" id="work"><div class="wrap">' +
+        '<div class="section-head">' +
+          '<p class="eyebrow eyebrow--accent">Some of our work</p>' +
+          "<h2>What happy customers are getting.</h2>" +
+          '<p class="lede">Real onepagers we have delivered \u2014 confident, on-brand and lightly ' +
+          "detached from reality. Open any of them as a PDF.</p>" +
+        "</div>" +
+        '<div class="work-grid">' + cards + "</div>" +
+
+        '<div class="section-head mt-3">' +
+          '<p class="eyebrow eyebrow--accent">Merch &amp; decision fuel</p>' +
+          "<h2>Delivered warm. Suspiciously on-message.</h2>" +
+        "</div>" +
+        '<div class="showcase-grid">' + showcase + "</div>" +
+
+        (quotes ? '<div class="section-head mt-3"><p class="eyebrow eyebrow--accent">Testimonials</p>' +
+          "<h2>Confidently satisfied. Allegedly.</h2></div>" +
+          '<div class="card-grid">' + quotes + "</div>" : "") +
+      "</div></section>"
+    );
   }
 
   function ctaBand() {
@@ -360,8 +433,8 @@
     var m = h.match(/^\/service\/([a-z0-9-]+)/i);
     if (m) return { view: "service", slug: m[1] };
     if (h === "/" || h === "" || /^\/(#.*)?$/.test(h)) return { view: "home" };
-    // support #/about, #/method, #/portfolio as home + scroll
-    var sec = h.match(/^\/(about|method|portfolio)$/);
+    // support #/about, #/method, #/portfolio, #/work as home + scroll
+    var sec = h.match(/^\/(about|method|portfolio|work)$/);
     if (sec) return { view: "home", scroll: sec[1] };
     return { view: "home" };
   }
