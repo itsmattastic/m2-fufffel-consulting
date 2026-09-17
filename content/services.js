@@ -87,7 +87,7 @@
       description:
         "The capability everything else rests on: translating uncertainty into confident language, " +
         "strategic fog and action-shaped ambiguity \u2014 so work can proceed before the facts arrive.",
-      accent: "#c6ff3a",
+      accent: "#6387d7",
       foundational: true,
       modules: [
         {
@@ -372,7 +372,7 @@
       cover: "assets/work/work-overview.jpg",
       pdf: "assets/pdf/overview.pdf",
       service: "convincing-nonsense",
-      accent: "#c6ff3a",
+      accent: "#6387d7",
     },
   ];
 

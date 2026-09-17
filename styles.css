@@ -8,23 +8,26 @@
 /* ---- Design tokens ---- */
 :root {
   /* Canvas + ink */
-  --bg: #0b0b0d;
-  --bg-elev: #141417;
-  --bg-elev-2: #1b1b20;
-  --ink: #f4efe6;          /* warm off-white primary text */
-  --ink-muted: #a2a09a;    /* muted grey secondary text */
-  --ink-faint: #6f6d68;
-  --border: #2a2a30;
-  --border-strong: #3a3a42;
+  --bg: #080c16;           /* blue-tinted charcoal, matches logo canvas */
+  --bg-elev: #0f1524;
+  --bg-elev-2: #151c2e;
+  --ink: #eef1f8;          /* cool off-white primary text */
+  --ink-muted: #9aa3ba;    /* muted blue-grey secondary text */
+  --ink-faint: #6b7289;
+  --border: #232a3d;
+  --border-strong: #333c54;
 
-  /* Accents: one acid, one warm amber */
-  --acid: #c6ff3a;
-  --acid-dim: #93bf1f;
+  /* Accents: brand blue (from the logo) + a warm amber counterpoint */
+  --blue: #6387d7;         /* exact logo periwinkle */
+  --blue-bright: #7ea2ff;  /* brighter, for text/fills on dark (contrast-safe) */
+  --blue-dim: #4c6bb0;
+  --acid: #7ea2ff;         /* kept as an alias so older refs still resolve to blue */
+  --acid-dim: #4c6bb0;
   --amber: #ff9d3d;
   --amber-dim: #c97416;
 
-  /* Per-service accent is injected via --accent inline; fall back to acid */
-  --accent: var(--acid);
+  /* Per-service accent is injected via --accent inline; fall back to brand blue */
+  --accent: var(--blue-bright);
 
   /* Shape + depth */
   --radius: 16px;
@@ -68,7 +71,7 @@ body {
   min-height: 100vh;
   /* Subtle technical texture: faint grid + grain-ish vignette. Cheap, no assets. */
   background-image:
-    radial-gradient(1200px 700px at 85% -10%, rgba(198, 255, 58, 0.06), transparent 60%),
+    radial-gradient(1200px 700px at 85% -10%, rgba(99, 135, 215, 0.12), transparent 60%),
     radial-gradient(900px 600px at 5% 5%, rgba(255, 157, 61, 0.05), transparent 55%),
     linear-gradient(transparent 0, transparent calc(100% - 1px), rgba(255, 255, 255, 0.02) 100%),
     linear-gradient(90deg, transparent 0, transparent calc(100% - 1px), rgba(255, 255, 255, 0.02) 100%);
@@ -208,7 +211,7 @@ a { color: inherit; text-decoration: none; }
   border: 0;
   cursor: pointer;
 }
-.nav__cta:hover { background: #d7ff6a; }
+.nav__cta:hover { background: var(--blue); }
 
 .nav__toggle {
   display: none;
@@ -517,7 +520,7 @@ a { color: inherit; text-decoration: none; }
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   background:
-    radial-gradient(700px 300px at 90% 0%, rgba(198, 255, 58, 0.1), transparent 60%),
+    radial-gradient(700px 300px at 90% 0%, rgba(99, 135, 215, 0.16), transparent 60%),
     var(--bg-elev);
   padding: clamp(1.6rem, 5vw, 3rem);
   display: flex;
