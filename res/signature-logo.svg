@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="140" viewBox="0 0 520 140" font-family="Helvetica, Arial, sans-serif">
+  <!-- transparent background; works on light or dark email themes -->
+  <defs>
+    <clipPath id="circleClip"><circle cx="70" cy="70" r="56"/></clipPath>
+  </defs>
+
+  <!-- Blue M² sticker circle -->
+  <circle cx="70" cy="70" r="56" fill="#6387d7"/>
+
+  <!-- M2 wordmark inside the circle -->
+  <text x="60" y="70" text-anchor="middle" dominant-baseline="central"
+        font-size="62" font-weight="800" fill="#0b1020" letter-spacing="-2">M</text>
+  <text x="94" y="52" text-anchor="middle" dominant-baseline="central"
+        font-size="30" font-weight="800" fill="#0b1020">2</text>
+
+  <!-- Peeling sticker corner (bottom-right) with FUFFFEL -->
+  <g>
+    <!-- soft drop shadow under the peel -->
+    <path d="M 96 120 Q 120 116 124 92 Q 122 108 108 116 Q 102 120 96 120 Z"
+          fill="#000000" opacity="0.18"/>
+    <!-- the folded/curled white paper -->
+    <path d="M 124 92 Q 124 116 98 121 Q 112 112 111 100 Q 118 99 124 92 Z"
+          fill="#f4f6fb" stroke="#c7ccd8" stroke-width="0.5"/>
+    <text x="112" y="103" text-anchor="middle" transform="rotate(-20 112 103)"
+          font-size="10.5" font-weight="700" fill="#20242e" font-style="italic">FUFFFEL</text>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="150" y="60" font-size="30" font-weight="800" fill="#111318" letter-spacing="-0.5">M&amp;M <tspan fill="#3559e6">Fufffel</tspan></text>
+  <text x="151" y="86" font-size="15" font-weight="600" fill="#5c6470" letter-spacing="3">CONSULTING AB</text>
+</svg>
