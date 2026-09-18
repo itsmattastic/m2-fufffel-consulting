@@ -231,26 +231,33 @@
     {
       slug: "eta-estimating-service",
       name: "M2 Fufffel ETA Estimating Service",
-      eyebrow: "Estimation",
-      badge: "FICTIVE SERVICE",
-      headline: "An ETA for your ETA.",
+      eyebrow: "Estimation \u00b7 powered by Meta-ETA\u2122",
+      badge: "TRADEMARK PENDING*",
+      headline: "An ETA for your ETA \u2014 delivered as a Meta-ETA\u2122.",
       description:
-        "We estimate the estimate, calibrate confidence in the confidence, and hand back an " +
-        "executive-ready, date-shaped object suitable for framing.",
+        "Built entirely around our flagship Meta-ETA\u2122: we don\u2019t estimate the work, we estimate when we\u2019ll " +
+        "next be able to estimate it. Every engagement returns a Meta-ETA\u2122 \u2014 an executive-ready, " +
+        "date-shaped object suitable for framing, minus the commitment.",
       accent: "#ffd23f",
       ladder: [
         "Directional-ish",
         "Plausible pending alignment",
         "Estimated estimate",
-        "Meta-ETA\u2122",
+        "Meta-ETA\u2122 (you are here)",
+        "Meta-ETA\u2122 for the Meta-ETA\u2122",
         "Probably after the next sync",
       ],
       modules: [
-        { h: "Estimate the estimate", p: "We do not estimate the work; we estimate when we could estimate it." },
-        { h: "Confidence calibration", p: "We measure our confidence, then measure our confidence in that." },
-        { h: "Date-shaped object", p: "A deliverable that looks exactly like a date, minus the commitment." },
+        { h: "Meta-ETA\u2122 generation", p: "The core deliverable: not when it\u2019s done, but when we\u2019ll next be able to say when it\u2019s done." },
+        { h: "Confidence in the confidence", p: "We measure our confidence in the Meta-ETA\u2122, then Meta-ETA\u2122 that confidence too." },
+        { h: "Recursive re-forecasting", p: "Each Meta-ETA\u2122 politely schedules the next Meta-ETA\u2122. The date always exists; its meaning stays out of scope." },
       ],
-      quote: { text: "An ETA for your ETA.", cite: "M2 Fufffel ETA Estimating Service" },
+      points: [
+        "Every output is a Meta-ETA\u2122, never an actual date.",
+        "Meta-ETA\u2122 on time. The thing it estimates, comfortably TBD.",
+        "Ask for an ETA; leave with a Meta-ETA\u2122 for the next Meta-ETA\u2122.",
+      ],
+      quote: { text: "An ETA for your ETA. We call it the Meta-ETA\u2122.", cite: "M2 Fufffel ETA Estimating Service" },
     },
 
     {
