@@ -95,7 +95,7 @@
         "convincing-nonsense", "m2-decision-model", "osg-slide-generating-service",
         "union-alignment-nonsense-engine", "eta-estimating-service", "meta-eta",
         "dark-cloud-navigator", "inner-excellence-realignment", "afterwork", "coffee-mug-service",
-        "m2-poking-service",
+        "m2-poking-service", "heard-and-seen",
       ],
       modules: [
         { h: "Multi-agent orchestration", p: "One agent per service, each confidently sub-tasking the others until a deck emerges." },
@@ -415,11 +415,51 @@
         "actually deploy passive-aggressive automation against colleagues \u2014 real accountability is a " +
         "conversation, not a GIF.",
     },
+
+    {
+      slug: "heard-and-seen",
+      name: "Heard & Seen\u2122",
+      eyebrow: "Attention management",
+      badge: "TRADEMARK PENDING*",
+      headline: "Make them feel heard. Without the hearing.",
+      description:
+        "The polite way to disengage: Heard & Seen\u2122 uses Convincing Nonsense\u2122 to make persistently " +
+        "over-communicative colleagues feel deeply acknowledged \u2014 warm reflective replies, thoughtful " +
+        "pauses, validating noises \u2014 while you quietly reclaim your attention.",
+      accent: "#c58bff",
+      modules: [
+        { h: "Active-listening simulation", p: "\u201cThat\u2019s such a great point, tell me more\u201d \u2014 generated, warmly, so they feel genuinely engaged with." },
+        { h: "Validation-as-a-Service", p: "Reflective paraphrasing (\u201cso what I\u2019m hearing is\u2026\u201d) that confirms they were heard, without committing you to anything." },
+        { h: "Graceful non-response", p: "Acknowledgements that feel like answers. Everyone leaves the thread feeling seen; nothing was actually decided." },
+      ],
+      formula: "peace = (warm acknowledgement \u00d7 zero follow-through) \u00f7 your remaining attention",
+      points: [
+        "They feel heard. You stay unbothered. Convincing Nonsense\u2122 does the rest.",
+        "\u201cThanks so much for flagging this \u2014 really valuable.\u201d (No action was taken.)",
+        "Empathy-shaped output, attention-cost zero.",
+      ],
+      quote: {
+        text: "I felt so listened to. I have no idea what we agreed, but I felt wonderful.",
+        cite: "Heard & Seen\u2122 \u2014 satisfied (unattended) stakeholder",
+      },
+      disclaimer:
+        "Fictional satire \u2014 not real communication, relationship or workplace advice. Please actually " +
+        "listen to your colleagues; people deserve genuine attention, not Convincing Nonsense\u2122.",
+    },
   ];
 
   /* ---- "Some of our work": real onepagers delivered to (delighted) clients. ---- */
   /* Each has a cover image (a PDF page preview) and links to the full PDF.        */
   const WORK = [
+    {
+      title: "Heard & Seen\u2122",
+      client: "For an exec drowning in over-communication",
+      blurb: "We made their most persistent stakeholders feel deeply acknowledged \u2014 warm, reflective, validating \u2014 while quietly handing the exec their attention back. Everyone felt wonderful; nothing was decided.",
+      cover: "assets/work/work-heard-and-seen.jpg",
+      pdf: "assets/pdf/heard-and-seen.pdf",
+      service: "heard-and-seen",
+      accent: "#c58bff",
+    },
     {
       title: "M\u00b2 Poking Service",
       client: "For a team that had run out of polite reminders",

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M&amp;M Fufffel Consulting AB — Heard &amp; Seen™ Onepager</title>
+  <style>
+    :root {
+      --artifact-background: #ffffff;
+      --artifact-background-light: #f1f3f6;
+      --artifact-border-light: #e3e6ec;
+      --artifact-border-dark: #cdd2db;
+      --artifact-primary-brand: #3559e6;
+      --artifact-primary-highlight: #0d0f14;
+      --artifact-text-primary: #11141a;
+      --artifact-text-secondary: #5c6470;
+      --artifact-text-highlight: #e8eefc;
+      --artifact-warning-background: #fff3df;
+      --artifact-warning: #a96600;
+      --artifact-ink-soft: #2f3540;
+    }
+    /* Blue-led dark theme, matching the M² Fufffel logo. */
+    html[data-theme='dark'] {
+      --artifact-background: #080c16;
+      --artifact-background-light: #0f1524;
+      --artifact-border-light: #232a3d;
+      --artifact-border-dark: #333c54;
+      --artifact-primary-brand: #7ea2ff;
+      --artifact-primary-highlight: #eef1f8;
+      --artifact-text-primary: #eef1f8;
+      --artifact-text-secondary: #9aa3ba;
+      --artifact-text-highlight: #14213d;
+      --artifact-warning-background: #2a2112;
+      --artifact-warning: #f1bb63;
+      --artifact-ink-soft: #d8dce4;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; background: var(--artifact-background); color: var(--artifact-text-primary);
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 16px; line-height: 1.6; letter-spacing: -0.005em;
+    }
+    a { color: var(--artifact-primary-brand); text-decoration: none; }
+    .shell { max-width: 1120px; margin: 0 auto; padding: 28px 28px 72px; }
+    .eyebrow, .mono, .label, th {
+      font-family: "SF Mono", "IBM Plex Mono", "Cascadia Code", "Consolas", monospace;
+      font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
+      color: var(--artifact-text-secondary);
+    }
+    h1, h2, h3, .display { margin: 0; font-weight: 400; line-height: 1.04; letter-spacing: -.03em; color: var(--artifact-text-primary); }
+    h1 { font-size: clamp(3.2rem, 8vw, 7.6rem); font-weight: 300; }
+    h2 { font-size: clamp(2rem, 4vw, 3.8rem); font-weight: 300; }
+    h3 { font-size: 1.35rem; font-weight: 500; }
+    p { margin: 0; color: var(--artifact-text-secondary); }
+
+    .topline { display: flex; justify-content: space-between; align-items: center; padding-bottom: 18px; border-bottom: 1px solid var(--artifact-border-light); }
+    .brandmark { display: inline-flex; align-items: center; gap: 10px; color: var(--artifact-text-primary); }
+    .mark { display: grid; place-items: center; width: 34px; height: 34px; background: var(--artifact-primary-brand); color: var(--artifact-background); border-radius: 50%; font-weight: 700; letter-spacing: -.08em; }
+    .status { display: inline-flex; align-items: center; gap: 8px; }
+    .status-dot { width: 7px; height: 7px; border-radius: 50%; background: #46d39a; }
+
+    .hero { padding: 86px 0 78px; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(280px, .7fr); gap: 48px; align-items: end; }
+    .hero h1 { max-width: 860px; }
+    .hero h1 em { font-style: normal; color: var(--artifact-primary-brand); }
+    .hero-copy { max-width: 590px; margin-top: 28px; font-size: 1.14rem; }
+    .hero-copy strong { color: var(--artifact-text-primary); font-weight: 600; }
+    .hero-note { padding: 22px; border: 1px solid var(--artifact-border-dark); background: var(--artifact-background-light); border-radius: 8px; }
+    .hero-note .big { font-size: 2.8rem; line-height: 1; font-weight: 300; letter-spacing: -.05em; color: var(--artifact-primary-brand); }
+    .hero-note p { margin-top: 12px; font-size: .93rem; }
+
+    .rule { height: 1px; background: var(--artifact-border-light); }
+    .section { padding: 72px 0; }
+    .section-head { display: flex; justify-content: space-between; gap: 24px; align-items: end; margin-bottom: 30px; }
+    .section-head p { max-width: 430px; font-size: .96rem; }
+
+    .competencies { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--artifact-border-dark); border-bottom: 1px solid var(--artifact-border-dark); }
+    .competency { padding: 24px 20px 26px 0; margin-right: 20px; border-right: 1px solid var(--artifact-border-light); }
+    .competency:last-child { border-right: 0; margin-right: 0; }
+    .competency h3 { margin: 12px 0 8px; }
+    .competency p { font-size: .92rem; }
+    .number { color: var(--artifact-primary-brand); font-size: 1rem; }
+
+    .model { display: grid; grid-template-columns: 1fr 1.15fr; gap: 52px; align-items: start; }
+    .model-intro { max-width: 420px; }
+    .model-intro .formula { margin: 34px 0 20px; font-size: clamp(2.4rem, 5.5vw, 4.6rem); line-height: .92; letter-spacing: -.05em; font-weight: 300; color: var(--artifact-primary-brand); }
+    .model-intro .formula small { display: block; margin-top: 14px; font-size: .78rem; line-height: 1.35; letter-spacing: .04em; color: var(--artifact-text-secondary); }
+    .steps { border-top: 1px solid var(--artifact-border-dark); }
+    .step { display: grid; grid-template-columns: 60px 1fr; gap: 18px; padding: 20px 0; border-bottom: 1px solid var(--artifact-border-light); }
+    .step-no { color: var(--artifact-primary-brand); font-family: "SF Mono", monospace; font-size: .85rem; }
+    .step h3 { font-size: 1.1rem; margin-bottom: 4px; }
+    .step p { font-size: .92rem; }
+    .step .tag { display: inline-block; margin-top: 10px; padding: 4px 7px; border-radius: 4px; background: var(--artifact-warning-background); color: var(--artifact-warning); font-family: "SF Mono", monospace; font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; }
+
+    .fleet { display: flex; flex-wrap: wrap; gap: 8px; }
+    .agent { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border: 1px solid var(--artifact-border-dark); border-radius: 999px; background: var(--artifact-background-light); font-size: .86rem; color: var(--artifact-text-primary); }
+    .agent .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--artifact-primary-brand); }
+
+    .offers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .offer { min-height: 220px; padding: 24px; border: 1px solid var(--artifact-border-light); background: var(--artifact-background-light); border-radius: 8px; display: flex; flex-direction: column; justify-content: space-between; }
+    .offer:nth-child(2) { background: var(--artifact-text-highlight); border-color: var(--artifact-primary-brand); }
+    .offer h3 { max-width: 240px; margin: 24px 0 12px; }
+    .offer p { font-size: .9rem; }
+    .offer-footer { padding-top: 18px; font-family: "SF Mono", monospace; font-size: .72rem; color: var(--artifact-text-secondary); }
+
+    .quote-band { margin: 0 0 46px; padding: 42px 0; border-top: 1px solid var(--artifact-border-dark); border-bottom: 1px solid var(--artifact-border-dark); }
+    blockquote { margin: 0; max-width: 900px; font-size: clamp(1.7rem, 3.6vw, 3.1rem); font-weight: 300; line-height: 1.08; letter-spacing: -.04em; color: var(--artifact-text-primary); }
+    blockquote span { color: var(--artifact-primary-brand); }
+    .quote-by { margin-top: 18px; }
+
+    .disclaimer { margin: 0 0 46px; padding: 16px 18px; border: 1px solid var(--artifact-warning); background: var(--artifact-warning-background); color: var(--artifact-warning); border-radius: 8px; font-size: .86rem; }
+    .disclaimer strong { color: var(--artifact-warning); }
+
+    .cta { display: flex; justify-content: space-between; gap: 30px; align-items: end; padding: 36px; background: var(--artifact-primary-highlight); color: var(--artifact-background); border-radius: 8px; }
+    .cta h2 { color: var(--artifact-background); max-width: 650px; }
+    .cta p { color: var(--artifact-ink-soft); max-width: 470px; margin-top: 14px; }
+    .cta .seal { flex: 0 0 auto; width: 132px; height: 132px; border: 1px solid var(--artifact-primary-brand); border-radius: 50%; display: grid; place-items: center; text-align: center; color: var(--artifact-primary-brand); font-family: "SF Mono", monospace; font-size: .7rem; line-height: 1.4; letter-spacing: .08em; text-transform: uppercase; transform: rotate(-8deg); background: var(--artifact-background); }
+    .footer { display: flex; justify-content: space-between; gap: 20px; padding-top: 24px; color: var(--artifact-text-secondary); font-size: .78rem; }
+
+    .reveal { opacity: 0; transform: translateY(14px); animation: rise .65s ease forwards; }
+    .delay-1 { animation-delay: .08s; } .delay-2 { animation-delay: .16s; } .delay-3 { animation-delay: .24s; }
+    @keyframes rise { to { opacity: 1; transform: none; } }
+    @media (prefers-reduced-motion: reduce) { .reveal { animation: none; opacity: 1; transform: none; } }
+
+    @media (max-width: 760px) {
+      .shell { padding: 22px 18px 56px; }
+      .hero { padding: 58px 0 56px; }
+      .hero-grid, .model { grid-template-columns: 1fr; gap: 30px; }
+      .competencies, .offers { grid-template-columns: 1fr 1fr; }
+      .competency:nth-child(2) { border-right: 0; }
+      .competency:nth-child(n+3) { border-top: 1px solid var(--artifact-border-light); }
+      .cta { align-items: start; flex-direction: column; }
+      .footer { flex-direction: column; }
+    }
+    @media (max-width: 460px) { h1 { font-size: 3.35rem; } .competencies, .offers { grid-template-columns: 1fr; } .competency { margin-right: 0; padding-right: 0; border-right: 0; } .competency + .competency { border-top: 1px solid var(--artifact-border-light); } .offer { min-height: 0; } }
+
+    @media print {
+      html, body { background: var(--artifact-background) !important; }
+      body { margin: 0; padding: .4in .6in; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      .shell { max-width: 100% !important; width: 100% !important; padding: 0; }
+      section, .hero, .header { break-inside: avoid; margin-bottom: 20px !important; }
+      .hero { padding: 44px 0 36px; } .section { padding: 34px 0; }
+      .offer, .hero-note, .cta, .disclaimer { break-inside: avoid; box-shadow: none !important; }
+      .competencies, .offers { gap: 10px !important; }
+      .reveal { opacity: 1; transform: none; animation: none; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="topline reveal">
+      <div class="brandmark"><span class="mark">M²</span><span class="mono">M&amp;M Fufffel Consulting AB</span></div>
+      <div class="status mono"><span class="status-dot"></span> Fictive since 2026 · warmly disengaged</div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="reveal delay-1">
+          <div class="eyebrow">Attention management · empathy simulation · plausible presence</div>
+          <h1>Make them feel <em>heard</em>. Without the hearing.</h1>
+          <p class="hero-copy">Heard &amp; Seen™ is the polite way to disengage. Using <strong>Convincing Nonsense™</strong>,
+          we make persistently over-communicative colleagues feel deeply acknowledged — warm reflective replies,
+          thoughtful pauses, validating noises — while you quietly reclaim your attention.</p>
+        </div>
+        <aside class="hero-note reveal delay-2">
+          <div class="label">Core proposition</div>
+          <div class="big">Heard.<br>Seen.<br>Unattended.</div>
+          <p>They leave the conversation glowing. You never actually left your own train of thought.</p>
+        </aside>
+      </div>
+    </section>
+
+    <div class="rule"></div>
+
+    <section class="section">
+      <div class="section-head">
+        <div><div class="eyebrow">Why Heard &amp; Seen™</div><h2>Empathy-shaped output, attention-cost zero.</h2></div>
+        <p>For the gap between “I don’t have time for this” and “but I don’t want to seem rude.”</p>
+      </div>
+      <div class="competencies">
+        <article class="competency reveal"><div class="number mono">01 / LISTEN</div><h3>Active-listening simulation</h3><p>“That’s such a great point — tell me more.” Generated warmly, so they feel genuinely engaged with.</p></article>
+        <article class="competency reveal delay-1"><div class="number mono">02 / VALIDATE</div><h3>Validation-as-a-Service</h3><p>Reflective paraphrasing (“so what I’m hearing is…”) that confirms they were heard, without committing you to anything.</p></article>
+        <article class="competency reveal delay-2"><div class="number mono">03 / DEFER</div><h3>Graceful non-response</h3><p>Acknowledgements that feel like answers. Everyone leaves feeling seen; nothing was actually decided.</p></article>
+        <article class="competency reveal delay-3"><div class="number mono">04 / RECLAIM</div><h3>Attention recovery</h3><p>Your focus, quietly returned to you — while the other person experiences a warm, complete, deeply validating exchange.</p></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="model">
+        <div class="model-intro reveal">
+          <div class="eyebrow">The proprietary acknowledgement architecture</div>
+          <h2>The Feel-Heard Loop™</h2>
+          <div class="formula">acknowledge → validate → defer<small>Warm on the surface, weightless underneath. No commitments were harmed.</small></div>
+          <p>Powered end-to-end by Convincing Nonsense™: we generate exactly enough empathy-shaped language to satisfy the need to be heard, and exactly zero of the follow-through that would cost you your afternoon.</p>
+        </div>
+        <div class="steps">
+          <div class="step reveal"><div class="step-no">HS—01</div><div><h3>Detect the over-communicator</h3><p>The 40-minute “quick question,” the reply-all philosopher, the meeting that could have been a feeling.</p><span class="tag">Signal detection</span></div></div>
+          <div class="step reveal delay-1"><div class="step-no">HS—02</div><div><h3>Generate warm acknowledgement</h3><p>Convincing Nonsense™ composes validating, reflective, entirely non-committal responses that land as genuine care.</p><span class="tag">Empathy synthesis</span></div></div>
+          <div class="step reveal delay-2"><div class="step-no">HS—03</div><div><h3>Feel heard, stay unbothered</h3><p>They feel seen and valued. You feel rested. Nobody agreed to do anything, and everybody is happy about it.</p><span class="tag">Mutual serenity</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0;">
+      <div class="section-head"><div><div class="eyebrow">The phrase library</div><h2>Validating. Reflective. Weightless.</h2></div><p>A curated bank of things that sound like listening.</p></div>
+      <div class="fleet reveal">
+        <span class="agent"><span class="dot"></span>“So what I’m hearing is…”</span>
+        <span class="agent"><span class="dot"></span>“That’s a really great point.”</span>
+        <span class="agent"><span class="dot"></span>“Tell me more about that.”</span>
+        <span class="agent"><span class="dot"></span>“Totally valid, love it.”</span>
+        <span class="agent"><span class="dot"></span>“Let’s definitely keep this in mind.”</span>
+        <span class="agent"><span class="dot"></span>“Thanks so much for flagging.”</span>
+        <span class="agent"><span class="dot"></span>“I really appreciate you sharing that.”</span>
+        <span class="agent"><span class="dot"></span>*thoughtful nod*</span>
+      </div>
+    </section>
+
+    <div class="quote-band reveal">
+      <blockquote>“I felt so listened to. <span>I have no idea what we agreed</span>, but I felt wonderful.”</blockquote>
+      <div class="quote-by mono">— Heard &amp; Seen™ · satisfied (unattended) stakeholder</div>
+    </div>
+
+    <p class="disclaimer reveal"><strong>Disclaimer.</strong> Fictional satire — not real communication, relationship or
+    workplace advice. Please actually listen to your colleagues; people deserve genuine attention, not Convincing
+    Nonsense™.</p>
+
+    <section class="section" style="padding-top:0;">
+      <div class="section-head"><div><div class="eyebrow">Selected engagement tiers</div><h2>Reclaim your attention, warmly.</h2></div><p>Every tier leaves the other person feeling seen and you feeling free.</p></div>
+      <div class="offers">
+        <article class="offer reveal"><div><div class="label">01 · single</div><h3>One Warm Acknowledgement</h3><p>A single validating reply for that one message you cannot bring yourself to engage with.</p></div><div class="offer-footer">OUTPUT: a person who feels heard</div></article>
+        <article class="offer reveal delay-1"><div><div class="label">02 · loop</div><h3>The Feel-Heard Loop™</h3><p>Sustained acknowledgement across a whole thread, meeting or relationship. They glow; you rest.</p></div><div class="offer-footer">OUTPUT: mutual serenity</div></article>
+        <article class="offer reveal delay-2"><div><div class="label">03 · retainer</div><h3>Attention-as-a-Service</h3><p>Always-on empathy simulation for your most over-communicative stakeholders. Seen, always. Attended, never.</p></div><div class="offer-footer">OUTPUT: reclaimed focus</div></article>
+      </div>
+    </section>
+
+    <section class="cta reveal">
+      <div><div class="eyebrow" style="color:var(--artifact-primary-brand);">Engagement trigger</div><h2>You bring the person who won’t stop talking. We make them feel wonderful about it.</h2><p>Book a 30-minute session — we’ll acknowledge every word, commit to none of them, and hand your afternoon back.</p></div>
+      <div class="seal">100%<br>heard<br>&amp; seen</div>
+    </section>
+
+    <footer class="footer"><span class="mono">M&amp;M Fufffel Consulting AB</span><span>Fictive company · Not a real offering · No one was genuinely listened to.</span></footer>
+  </main>
+</body>
+</html>
