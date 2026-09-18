@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M&amp;M Fufffel Consulting AB — M² Poking Service Onepager</title>
+  <style>
+    :root {
+      --artifact-background: #ffffff;
+      --artifact-background-light: #f1f3f6;
+      --artifact-border-light: #e3e6ec;
+      --artifact-border-dark: #cdd2db;
+      --artifact-primary-brand: #3559e6;
+      --artifact-primary-highlight: #0d0f14;
+      --artifact-text-primary: #11141a;
+      --artifact-text-secondary: #5c6470;
+      --artifact-text-highlight: #e8eefc;
+      --artifact-warning-background: #fff3df;
+      --artifact-warning: #a96600;
+      --artifact-ink-soft: #2f3540;
+    }
+    /* Blue-led dark theme, matching the M² Fufffel logo. */
+    html[data-theme='dark'] {
+      --artifact-background: #080c16;
+      --artifact-background-light: #0f1524;
+      --artifact-border-light: #232a3d;
+      --artifact-border-dark: #333c54;
+      --artifact-primary-brand: #7ea2ff;
+      --artifact-primary-highlight: #eef1f8;
+      --artifact-text-primary: #eef1f8;
+      --artifact-text-secondary: #9aa3ba;
+      --artifact-text-highlight: #14213d;
+      --artifact-warning-background: #2a2112;
+      --artifact-warning: #f1bb63;
+      --artifact-ink-soft: #d8dce4;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; background: var(--artifact-background); color: var(--artifact-text-primary);
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 16px; line-height: 1.6; letter-spacing: -0.005em;
+    }
+    a { color: var(--artifact-primary-brand); text-decoration: none; }
+    .shell { max-width: 1120px; margin: 0 auto; padding: 28px 28px 72px; }
+    .eyebrow, .mono, .label, th {
+      font-family: "SF Mono", "IBM Plex Mono", "Cascadia Code", "Consolas", monospace;
+      font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
+      color: var(--artifact-text-secondary);
+    }
+    h1, h2, h3, .display { margin: 0; font-weight: 400; line-height: 1.04; letter-spacing: -.03em; color: var(--artifact-text-primary); }
+    h1 { font-size: clamp(3.2rem, 8vw, 7.6rem); font-weight: 300; }
+    h2 { font-size: clamp(2rem, 4vw, 3.8rem); font-weight: 300; }
+    h3 { font-size: 1.35rem; font-weight: 500; }
+    p { margin: 0; color: var(--artifact-text-secondary); }
+
+    .topline { display: flex; justify-content: space-between; align-items: center; padding-bottom: 18px; border-bottom: 1px solid var(--artifact-border-light); }
+    .brandmark { display: inline-flex; align-items: center; gap: 10px; color: var(--artifact-text-primary); }
+    .mark { display: grid; place-items: center; width: 34px; height: 34px; background: var(--artifact-primary-brand); color: var(--artifact-background); border-radius: 50%; font-weight: 700; letter-spacing: -.08em; }
+    .status { display: inline-flex; align-items: center; gap: 8px; }
+    .status-dot { width: 7px; height: 7px; border-radius: 50%; background: #46d39a; }
+
+    .hero { padding: 86px 0 78px; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(280px, .7fr); gap: 48px; align-items: end; }
+    .hero h1 { max-width: 860px; }
+    .hero h1 em { font-style: normal; color: var(--artifact-primary-brand); }
+    .hero-copy { max-width: 590px; margin-top: 28px; font-size: 1.14rem; }
+    .hero-copy strong { color: var(--artifact-text-primary); font-weight: 600; }
+    .hero-note { padding: 22px; border: 1px solid var(--artifact-border-dark); background: var(--artifact-background-light); border-radius: 8px; }
+    .hero-note .big { font-size: 2.8rem; line-height: 1; font-weight: 300; letter-spacing: -.05em; color: var(--artifact-primary-brand); }
+    .hero-note p { margin-top: 12px; font-size: .93rem; }
+
+    .rule { height: 1px; background: var(--artifact-border-light); }
+    .section { padding: 72px 0; }
+    .section-head { display: flex; justify-content: space-between; gap: 24px; align-items: end; margin-bottom: 30px; }
+    .section-head p { max-width: 430px; font-size: .96rem; }
+
+    .competencies { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--artifact-border-dark); border-bottom: 1px solid var(--artifact-border-dark); }
+    .competency { padding: 24px 20px 26px 0; margin-right: 20px; border-right: 1px solid var(--artifact-border-light); }
+    .competency:last-child { border-right: 0; margin-right: 0; }
+    .competency h3 { margin: 12px 0 8px; }
+    .competency p { font-size: .92rem; }
+    .number { color: var(--artifact-primary-brand); font-size: 1rem; }
+
+    .model { display: grid; grid-template-columns: 1fr 1.15fr; gap: 52px; align-items: start; }
+    .model-intro { max-width: 420px; }
+    .model-intro .formula { margin: 34px 0 20px; font-size: clamp(2.4rem, 5.5vw, 4.6rem); line-height: .92; letter-spacing: -.05em; font-weight: 300; color: var(--artifact-primary-brand); }
+    .model-intro .formula small { display: block; margin-top: 14px; font-size: .78rem; line-height: 1.35; letter-spacing: .04em; color: var(--artifact-text-secondary); }
+    .steps { border-top: 1px solid var(--artifact-border-dark); }
+    .step { display: grid; grid-template-columns: 60px 1fr; gap: 18px; padding: 20px 0; border-bottom: 1px solid var(--artifact-border-light); }
+    .step-no { color: var(--artifact-primary-brand); font-family: "SF Mono", monospace; font-size: .85rem; }
+    .step h3 { font-size: 1.1rem; margin-bottom: 4px; }
+    .step p { font-size: .92rem; }
+    .step .tag { display: inline-block; margin-top: 10px; padding: 4px 7px; border-radius: 4px; background: var(--artifact-warning-background); color: var(--artifact-warning); font-family: "SF Mono", monospace; font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; }
+
+    .fleet { display: flex; flex-wrap: wrap; gap: 8px; }
+    .agent { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border: 1px solid var(--artifact-border-dark); border-radius: 999px; background: var(--artifact-background-light); font-size: .86rem; color: var(--artifact-text-primary); }
+    .agent .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--artifact-primary-brand); }
+
+    .offers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .offer { min-height: 220px; padding: 24px; border: 1px solid var(--artifact-border-light); background: var(--artifact-background-light); border-radius: 8px; display: flex; flex-direction: column; justify-content: space-between; }
+    .offer:nth-child(2) { background: var(--artifact-text-highlight); border-color: var(--artifact-primary-brand); }
+    .offer h3 { max-width: 240px; margin: 24px 0 12px; }
+    .offer p { font-size: .9rem; }
+    .offer-footer { padding-top: 18px; font-family: "SF Mono", monospace; font-size: .72rem; color: var(--artifact-text-secondary); }
+
+    .quote-band { margin: 0 0 46px; padding: 42px 0; border-top: 1px solid var(--artifact-border-dark); border-bottom: 1px solid var(--artifact-border-dark); }
+    blockquote { margin: 0; max-width: 900px; font-size: clamp(1.7rem, 3.6vw, 3.1rem); font-weight: 300; line-height: 1.08; letter-spacing: -.04em; color: var(--artifact-text-primary); }
+    blockquote span { color: var(--artifact-primary-brand); }
+    .quote-by { margin-top: 18px; }
+
+    .disclaimer { margin: 0 0 46px; padding: 16px 18px; border: 1px solid var(--artifact-warning); background: var(--artifact-warning-background); color: var(--artifact-warning); border-radius: 8px; font-size: .86rem; }
+    .disclaimer strong { color: var(--artifact-warning); }
+
+    .cta { display: flex; justify-content: space-between; gap: 30px; align-items: end; padding: 36px; background: var(--artifact-primary-highlight); color: var(--artifact-background); border-radius: 8px; }
+    .cta h2 { color: var(--artifact-background); max-width: 650px; }
+    .cta p { color: var(--artifact-ink-soft); max-width: 470px; margin-top: 14px; }
+    .cta .seal { flex: 0 0 auto; width: 132px; height: 132px; border: 1px solid var(--artifact-primary-brand); border-radius: 50%; display: grid; place-items: center; text-align: center; color: var(--artifact-primary-brand); font-family: "SF Mono", monospace; font-size: .7rem; line-height: 1.4; letter-spacing: .08em; text-transform: uppercase; transform: rotate(-8deg); background: var(--artifact-background); }
+    .footer { display: flex; justify-content: space-between; gap: 20px; padding-top: 24px; color: var(--artifact-text-secondary); font-size: .78rem; }
+
+    .reveal { opacity: 0; transform: translateY(14px); animation: rise .65s ease forwards; }
+    .delay-1 { animation-delay: .08s; } .delay-2 { animation-delay: .16s; } .delay-3 { animation-delay: .24s; }
+    @keyframes rise { to { opacity: 1; transform: none; } }
+    @media (prefers-reduced-motion: reduce) { .reveal { animation: none; opacity: 1; transform: none; } }
+
+    @media (max-width: 760px) {
+      .shell { padding: 22px 18px 56px; }
+      .hero { padding: 58px 0 56px; }
+      .hero-grid, .model { grid-template-columns: 1fr; gap: 30px; }
+      .competencies, .offers { grid-template-columns: 1fr 1fr; }
+      .competency:nth-child(2) { border-right: 0; }
+      .competency:nth-child(n+3) { border-top: 1px solid var(--artifact-border-light); }
+      .cta { align-items: start; flex-direction: column; }
+      .footer { flex-direction: column; }
+    }
+    @media (max-width: 460px) { h1 { font-size: 3.35rem; } .competencies, .offers { grid-template-columns: 1fr; } .competency { margin-right: 0; padding-right: 0; border-right: 0; } .competency + .competency { border-top: 1px solid var(--artifact-border-light); } .offer { min-height: 0; } }
+
+    @media print {
+      html, body { background: var(--artifact-background) !important; }
+      body { margin: 0; padding: .4in .6in; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      .shell { max-width: 100% !important; width: 100% !important; padding: 0; }
+      section, .hero, .header { break-inside: avoid; margin-bottom: 20px !important; }
+      .hero { padding: 44px 0 36px; } .section { padding: 34px 0; }
+      .offer, .hero-note, .cta, .disclaimer { break-inside: avoid; box-shadow: none !important; }
+      .competencies, .offers { gap: 10px !important; }
+      .reveal { opacity: 1; transform: none; animation: none; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="topline reveal">
+      <div class="brandmark"><span class="mark">M²</span><span class="mono">M&amp;M Fufffel Consulting AB</span></div>
+      <div class="status mono"><span class="status-dot"></span> Fictive since 2026 · passive-aggressively ready</div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="reveal delay-1">
+          <div class="eyebrow">Escalation · behavioural nudging · plausible politeness</div>
+          <h1>When <em>nudging</em> is not enough.</h1>
+          <p class="hero-copy">M² Poking Service is the passive-aggressive escalation layer: when a gentle nudge goes
+          unanswered, we <strong>automatically open a Teams chat</strong> with a perfectly-chosen GIF and a warmly-worded
+          reminder of the shortcoming — so accountability arrives without anyone having to raise their voice.</p>
+        </div>
+        <aside class="hero-note reveal delay-2">
+          <div class="label">Core proposition</div>
+          <div class="big">“Just<br>circling<br>back 🙏”</div>
+          <p>Read receipts weaponised, professionally. Consequences delivered with a reaction GIF and deniable warmth.</p>
+        </aside>
+      </div>
+    </section>
+
+    <div class="rule"></div>
+
+    <section class="section">
+      <div class="section-head">
+        <div><div class="eyebrow">Why poke, why now</div><h2>Escalation with a smile emoji.</h2></div>
+        <p>For the gap between “I already reminded them” and “I refuse to have the actual conversation.”</p>
+      </div>
+      <div class="competencies">
+        <article class="competency reveal"><div class="number mono">01 / TRIGGER</div><h3>Auto Teams chat creation</h3><p>The moment a nudge is ignored, a fresh 1:1 opens itself. You did not schedule it. It is simply here now.</p></article>
+        <article class="competency reveal delay-1"><div class="number mono">02 / GIF</div><h3>Contextual GIF selection</h3><p>An AI-picked reaction GIF that says “no worries!” while unmistakably meaning something else entirely.</p></article>
+        <article class="competency reveal delay-2"><div class="number mono">03 / TONE</div><h3>Passive-aggressive tone engine</h3><p>“Just circling back — no rush, only urgency.” Calibrated to sting politely and deny plausibly.</p></article>
+        <article class="competency reveal delay-3"><div class="number mono">04 / RECEIPT</div><h3>Read-receipt weaponisation</h3><p>We know you saw it. It knows you saw it. The GIF knows you saw it. Everyone is being very professional about it.</p></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="model">
+        <div class="model-intro reveal">
+          <div class="eyebrow">The proprietary escalation architecture</div>
+          <h2>The Poke Ladder™</h2>
+          <div class="formula">nudge → poke → GIF → 🙏<small>Each rung more polite on the surface and more pointed underneath.</small></div>
+          <p>When the nudge is ignored, the Poke Ladder™ escalates automatically — never louder, only warmer, until the shortcoming is acknowledged or the recipient quietly complies.</p>
+        </div>
+        <div class="steps">
+          <div class="step reveal"><div class="step-no">PK—01</div><div><h3>Detect the ignored nudge</h3><p>We watch for the unanswered ping, the unread message, the deadline that came and softly went.</p><span class="tag">Silence detection</span></div></div>
+          <div class="step reveal delay-1"><div class="step-no">PK—02</div><div><h3>Compose the poke</h3><p>Open a Teams chat, attach the ideal GIF, and phrase the reminder so it is technically friendly and undeniably pointed.</p><span class="tag">Warmth with an edge</span></div></div>
+          <div class="step reveal delay-2"><div class="step-no">PK—03</div><div><h3>Escalate, gently</h3><p>No response? The tone stays kind while the frequency does not. “Per my last poke 🙏.”</p><span class="tag">Relentless politeness</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0;">
+      <div class="section-head"><div><div class="eyebrow">The GIF library</div><h2>A perfectly-chosen reaction, every time.</h2></div><p>Curated for maximum plausible deniability and minimum eye contact.</p></div>
+      <div class="fleet reveal">
+        <span class="agent"><span class="dot"></span>“No worries if not! 🙂”</span>
+        <span class="agent"><span class="dot"></span>slow clap</span>
+        <span class="agent"><span class="dot"></span>“this is fine” dog</span>
+        <span class="agent"><span class="dot"></span>tapping watch</span>
+        <span class="agent"><span class="dot"></span>“friendly reminder” cat</span>
+        <span class="agent"><span class="dot"></span>thumbs up (aggressive)</span>
+        <span class="agent"><span class="dot"></span>“still waiting…”</span>
+        <span class="agent"><span class="dot"></span>🙏 hands</span>
+      </div>
+    </section>
+
+    <div class="quote-band reveal">
+      <blockquote>“Just gently circling back on the thing from three weeks ago. <span>No pressure! 🙏</span>”</blockquote>
+      <div class="quote-by mono">— M² Poking Service · auto-generated reminder #4</div>
+    </div>
+
+    <p class="disclaimer reveal"><strong>Disclaimer.</strong> Fictional satire, not a real product and not workplace, HR or
+    communications advice. Do not actually deploy passive-aggressive automation against colleagues — real accountability
+    is a conversation, not a GIF.</p>
+
+    <section class="section" style="padding-top:0;">
+      <div class="section-head"><div><div class="eyebrow">Selected engagement tiers</div><h2>Escalate responsibly. Automatically.</h2></div><p>Every tier includes read receipts, one GIF and a follow-up you did not ask for.</p></div>
+      <div class="offers">
+        <article class="offer reveal"><div><div class="label">01 · nudge+</div><h3>Single Poke</h3><p>One automated Teams chat, one impeccable GIF, one reminder that lands somewhere between kind and pointed.</p></div><div class="offer-footer">OUTPUT: acknowledged shortcoming</div></article>
+        <article class="offer reveal delay-1"><div><div class="label">02 · ladder</div><h3>The Poke Ladder™</h3><p>Escalating reminders at rising frequency and steady warmth, until a response arrives or dignity quietly departs.</p></div><div class="offer-footer">OUTPUT: eventual compliance</div></article>
+        <article class="offer reveal delay-2"><div><div class="label">03 · retainer</div><h3>Poking-as-a-Service</h3><p>Continuous monitoring of every open loop, with GIFs on standby, so no failure ever goes un-circled-back-upon.</p></div><div class="offer-footer">OUTPUT: perpetual accountability</div></article>
+      </div>
+    </section>
+
+    <section class="cta reveal">
+      <div><div class="eyebrow" style="color:var(--artifact-primary-brand);">Engagement trigger</div><h2>You bring the ignored message. We bring the chat, the GIF and the undertone.</h2><p>Book a 30-minute escalation session — or ignore this, and we will open a Teams chat about it. 🙏</p></div>
+      <div class="seal">100%<br>gently<br>poked</div>
+    </section>
+
+    <footer class="footer"><span class="mono">M&amp;M Fufffel Consulting AB</span><span>Fictive company · Not a real offering · No colleagues were genuinely passive-aggressed.</span></footer>
+  </main>
+</body>
+</html>

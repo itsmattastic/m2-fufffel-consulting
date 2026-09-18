@@ -95,6 +95,7 @@
         "convincing-nonsense", "m2-decision-model", "osg-slide-generating-service",
         "union-alignment-nonsense-engine", "eta-estimating-service", "meta-eta",
         "dark-cloud-navigator", "inner-excellence-realignment", "afterwork", "coffee-mug-service",
+        "m2-poking-service",
       ],
       modules: [
         { h: "Multi-agent orchestration", p: "One agent per service, each confidently sub-tasking the others until a deck emerges." },
@@ -375,11 +376,52 @@
       ],
       quote: { text: "This meeting could have been a mug.", cite: "Coffee Mug Service \u2014 top request" },
     },
+
+    {
+      slug: "m2-poking-service",
+      name: "M\u00b2 Poking Service",
+      eyebrow: "Escalation",
+      badge: "FICTIVE SERVICE",
+      headline: "When nudging is not enough.",
+      description:
+        "The passive-aggressive escalation layer: when a gentle nudge goes unanswered, we automatically " +
+        "open a Teams chat with a perfectly-chosen GIF and a warmly-worded reminder of the shortcoming \u2014 " +
+        "so accountability arrives without anyone having to raise their voice.",
+      accent: "#ff5d8f",
+      modules: [
+        { h: "Automated Teams chat creation", p: "The moment a nudge is ignored, a fresh 1:1 opens itself. You did not schedule it. It is simply here now." },
+        { h: "Contextual GIF selection", p: "An AI-picked reaction GIF that says \u201cno worries!\u201d while meaning something else entirely." },
+        { h: "Passive-aggressive tone engine", p: "\u201cJust circling back \u2014 no rush, only urgency.\u201d Calibrated to sting politely and deny plausibly." },
+      ],
+      formula: "reminder = (missed deadline \u00d7 perfect GIF) \u00f7 \u201cjust following up \ud83d\ude4f\u201d",
+      points: [
+        "Escalation with a smile emoji. Consequences with a reaction GIF.",
+        "Read receipts weaponised, professionally.",
+        "\u201cPer my last nudge\u2026\u201d \u2014 now fully automated.",
+      ],
+      quote: {
+        text: "Just gently circling back on the thing from three weeks ago. No pressure! \ud83d\ude4f",
+        cite: "M\u00b2 Poking Service \u2014 auto-generated reminder #4",
+      },
+      disclaimer:
+        "Fictional satire, not a real product and not workplace, HR or communications advice. Do not " +
+        "actually deploy passive-aggressive automation against colleagues \u2014 real accountability is a " +
+        "conversation, not a GIF.",
+    },
   ];
 
   /* ---- "Some of our work": real onepagers delivered to (delighted) clients. ---- */
   /* Each has a cover image (a PDF page preview) and links to the full PDF.        */
   const WORK = [
+    {
+      title: "M\u00b2 Poking Service",
+      client: "For a team that had run out of polite reminders",
+      blurb: "When nudging wasn\u2019t enough, we automated the Teams chats \u2014 perfect GIF, warm wording, pointed undertone. Accountability arrived; nobody had to raise their voice.",
+      cover: "assets/work/work-poking-service.jpg",
+      pdf: "assets/pdf/poking-service.pdf",
+      service: "m2-poking-service",
+      accent: "#ff5d8f",
+    },
     {
       title: "Agentic Fufffel\u2122",
       client: "For an enterprise that wanted AI to run the whole thing",
