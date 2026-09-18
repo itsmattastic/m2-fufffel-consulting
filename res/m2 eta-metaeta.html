@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M&amp;M Fufffel Consulting AB — ETA Estimating Service — Meta-ETA™ Onepager</title>
+  <style>
+    :root {
+      --artifact-background: #ffffff;
+      --artifact-background-light: #f1f3f6;
+      --artifact-border-light: #e3e6ec;
+      --artifact-border-dark: #cdd2db;
+      --artifact-primary-brand: #3559e6;
+      --artifact-primary-highlight: #0d0f14;
+      --artifact-text-primary: #11141a;
+      --artifact-text-secondary: #5c6470;
+      --artifact-text-highlight: #e8eefc;
+      --artifact-warning-background: #fff3df;
+      --artifact-warning: #a96600;
+      --artifact-ink-soft: #2f3540;
+    }
+    /* Blue-led dark theme, matching the M² Fufffel logo. */
+    html[data-theme='dark'] {
+      --artifact-background: #080c16;
+      --artifact-background-light: #0f1524;
+      --artifact-border-light: #232a3d;
+      --artifact-border-dark: #333c54;
+      --artifact-primary-brand: #7ea2ff;
+      --artifact-primary-highlight: #eef1f8;
+      --artifact-text-primary: #eef1f8;
+      --artifact-text-secondary: #9aa3ba;
+      --artifact-text-highlight: #14213d;
+      --artifact-warning-background: #2a2112;
+      --artifact-warning: #f1bb63;
+      --artifact-ink-soft: #d8dce4;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; background: var(--artifact-background); color: var(--artifact-text-primary);
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 16px; line-height: 1.6; letter-spacing: -0.005em;
+    }
+    a { color: var(--artifact-primary-brand); text-decoration: none; }
+    .shell { max-width: 1120px; margin: 0 auto; padding: 28px 28px 72px; }
+    .eyebrow, .mono, .label, th {
+      font-family: "SF Mono", "IBM Plex Mono", "Cascadia Code", "Consolas", monospace;
+      font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
+      color: var(--artifact-text-secondary);
+    }
+    h1, h2, h3, .display { margin: 0; font-weight: 400; line-height: 1.04; letter-spacing: -.03em; color: var(--artifact-text-primary); }
+    h1 { font-size: clamp(3.2rem, 8vw, 7.6rem); font-weight: 300; }
+    h2 { font-size: clamp(2rem, 4vw, 3.8rem); font-weight: 300; }
+    h3 { font-size: 1.35rem; font-weight: 500; }
+    p { margin: 0; color: var(--artifact-text-secondary); }
+
+    .topline { display: flex; justify-content: space-between; align-items: center; padding-bottom: 18px; border-bottom: 1px solid var(--artifact-border-light); }
+    .brandmark { display: inline-flex; align-items: center; gap: 10px; color: var(--artifact-text-primary); }
+    .mark { display: grid; place-items: center; width: 34px; height: 34px; background: var(--artifact-primary-brand); color: var(--artifact-background); border-radius: 50%; font-weight: 700; letter-spacing: -.08em; }
+    .status { display: inline-flex; align-items: center; gap: 8px; }
+    .status-dot { width: 7px; height: 7px; border-radius: 50%; background: #46d39a; }
+
+    .hero { padding: 86px 0 78px; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(280px, .7fr); gap: 48px; align-items: end; }
+    .hero h1 { max-width: 860px; }
+    .hero h1 em { font-style: normal; color: var(--artifact-primary-brand); }
+    .hero-copy { max-width: 590px; margin-top: 28px; font-size: 1.14rem; }
+    .hero-copy strong { color: var(--artifact-text-primary); font-weight: 600; }
+    .hero-note { padding: 22px; border: 1px solid var(--artifact-border-dark); background: var(--artifact-background-light); border-radius: 8px; }
+    .hero-note .big { font-size: 2.8rem; line-height: 1; font-weight: 300; letter-spacing: -.05em; color: var(--artifact-primary-brand); }
+    .hero-note p { margin-top: 12px; font-size: .93rem; }
+
+    .rule { height: 1px; background: var(--artifact-border-light); }
+    .section { padding: 72px 0; }
+    .section-head { display: flex; justify-content: space-between; gap: 24px; align-items: end; margin-bottom: 30px; }
+    .section-head p { max-width: 430px; font-size: .96rem; }
+
+    .competencies { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--artifact-border-dark); border-bottom: 1px solid var(--artifact-border-dark); }
+    .competency { padding: 24px 20px 26px 0; margin-right: 20px; border-right: 1px solid var(--artifact-border-light); }
+    .competency:last-child { border-right: 0; margin-right: 0; }
+    .competency h3 { margin: 12px 0 8px; }
+    .competency p { font-size: .92rem; }
+    .number { color: var(--artifact-primary-brand); font-size: 1rem; }
+
+    .model { display: grid; grid-template-columns: 1fr 1.15fr; gap: 52px; align-items: start; }
+    .model-intro { max-width: 420px; }
+    .model-intro .formula { margin: 34px 0 20px; font-size: clamp(2.4rem, 5.5vw, 4.6rem); line-height: .92; letter-spacing: -.05em; font-weight: 300; color: var(--artifact-primary-brand); }
+    .model-intro .formula small { display: block; margin-top: 14px; font-size: .78rem; line-height: 1.35; letter-spacing: .04em; color: var(--artifact-text-secondary); }
+    .steps { border-top: 1px solid var(--artifact-border-dark); }
+    .step { display: grid; grid-template-columns: 60px 1fr; gap: 18px; padding: 20px 0; border-bottom: 1px solid var(--artifact-border-light); }
+    .step-no { color: var(--artifact-primary-brand); font-family: "SF Mono", monospace; font-size: .85rem; }
+    .step h3 { font-size: 1.1rem; margin-bottom: 4px; }
+    .step p { font-size: .92rem; }
+    .step .tag { display: inline-block; margin-top: 10px; padding: 4px 7px; border-radius: 4px; background: var(--artifact-warning-background); color: var(--artifact-warning); font-family: "SF Mono", monospace; font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; }
+
+    .fleet { display: flex; flex-wrap: wrap; gap: 8px; }
+    .agent { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border: 1px solid var(--artifact-border-dark); border-radius: 999px; background: var(--artifact-background-light); font-size: .86rem; color: var(--artifact-text-primary); }
+    .agent .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--artifact-primary-brand); }
+
+    .offers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .offer { min-height: 220px; padding: 24px; border: 1px solid var(--artifact-border-light); background: var(--artifact-background-light); border-radius: 8px; display: flex; flex-direction: column; justify-content: space-between; }
+    .offer:nth-child(2) { background: var(--artifact-text-highlight); border-color: var(--artifact-primary-brand); }
+    .offer h3 { max-width: 240px; margin: 24px 0 12px; }
+    .offer p { font-size: .9rem; }
+    .offer-footer { padding-top: 18px; font-family: "SF Mono", monospace; font-size: .72rem; color: var(--artifact-text-secondary); }
+
+    .quote-band { margin: 0 0 46px; padding: 42px 0; border-top: 1px solid var(--artifact-border-dark); border-bottom: 1px solid var(--artifact-border-dark); }
+    blockquote { margin: 0; max-width: 900px; font-size: clamp(1.7rem, 3.6vw, 3.1rem); font-weight: 300; line-height: 1.08; letter-spacing: -.04em; color: var(--artifact-text-primary); }
+    blockquote span { color: var(--artifact-primary-brand); }
+    .quote-by { margin-top: 18px; }
+
+    .disclaimer { margin: 0 0 46px; padding: 16px 18px; border: 1px solid var(--artifact-warning); background: var(--artifact-warning-background); color: var(--artifact-warning); border-radius: 8px; font-size: .86rem; }
+    .disclaimer strong { color: var(--artifact-warning); }
+
+    .cta { display: flex; justify-content: space-between; gap: 30px; align-items: end; padding: 36px; background: var(--artifact-primary-highlight); color: var(--artifact-background); border-radius: 8px; }
+    .cta h2 { color: var(--artifact-background); max-width: 650px; }
+    .cta p { color: var(--artifact-ink-soft); max-width: 470px; margin-top: 14px; }
+    .cta .seal { flex: 0 0 auto; width: 132px; height: 132px; border: 1px solid var(--artifact-primary-brand); border-radius: 50%; display: grid; place-items: center; text-align: center; color: var(--artifact-primary-brand); font-family: "SF Mono", monospace; font-size: .7rem; line-height: 1.4; letter-spacing: .08em; text-transform: uppercase; transform: rotate(-8deg); background: var(--artifact-background); }
+    .footer { display: flex; justify-content: space-between; gap: 20px; padding-top: 24px; color: var(--artifact-text-secondary); font-size: .78rem; }
+
+    .reveal { opacity: 0; transform: translateY(14px); animation: rise .65s ease forwards; }
+    .delay-1 { animation-delay: .08s; } .delay-2 { animation-delay: .16s; } .delay-3 { animation-delay: .24s; }
+    @keyframes rise { to { opacity: 1; transform: none; } }
+    @media (prefers-reduced-motion: reduce) { .reveal { animation: none; opacity: 1; transform: none; } }
+
+    @media (max-width: 760px) {
+      .shell { padding: 22px 18px 56px; }
+      .hero { padding: 58px 0 56px; }
+      .hero-grid, .model { grid-template-columns: 1fr; gap: 30px; }
+      .competencies, .offers { grid-template-columns: 1fr 1fr; }
+      .competency:nth-child(2) { border-right: 0; }
+      .competency:nth-child(n+3) { border-top: 1px solid var(--artifact-border-light); }
+      .cta { align-items: start; flex-direction: column; }
+      .footer { flex-direction: column; }
+    }
+    @media (max-width: 460px) { h1 { font-size: 3.35rem; } .competencies, .offers { grid-template-columns: 1fr; } .competency { margin-right: 0; padding-right: 0; border-right: 0; } .competency + .competency { border-top: 1px solid var(--artifact-border-light); } .offer { min-height: 0; } }
+
+    @media print {
+      html, body { background: var(--artifact-background) !important; }
+      body { margin: 0; padding: .4in .6in; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      .shell { max-width: 100% !important; width: 100% !important; padding: 0; }
+      section, .hero, .header { break-inside: avoid; margin-bottom: 20px !important; }
+      .hero { padding: 44px 0 36px; } .section { padding: 34px 0; }
+      .offer, .hero-note, .cta, .disclaimer { break-inside: avoid; box-shadow: none !important; }
+      .competencies, .offers { gap: 10px !important; }
+      .reveal { opacity: 1; transform: none; animation: none; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="topline reveal">
+      <div class="brandmark"><span class="mark">M²</span><span class="mono">M&amp;M Fufffel Consulting AB</span></div>
+      <div class="status mono"><span class="status-dot"></span> Fictive since 2026 · Meta-ETA™-ready</div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="reveal delay-1">
+          <div class="eyebrow">Estimation · powered by Meta-ETA™</div>
+          <h1>An ETA for your ETA — delivered as a <em>Meta-ETA™</em>.</h1>
+          <p class="hero-copy">The M2 Fufffel ETA Estimating Service is built entirely around our flagship
+          <strong>Meta-ETA™</strong>. We don’t estimate the work — we estimate when we’ll next be able to estimate it,
+          and hand back an executive-ready, date-shaped object suitable for framing, minus the commitment.</p>
+        </div>
+        <aside class="hero-note reveal delay-2">
+          <div class="label">Core proposition</div>
+          <div class="big">Meta-ETA™</div>
+          <p>Not when it’s done. When we’ll next be able to say when it’s done. On time, every time — unlike the thing it estimates.</p>
+        </aside>
+      </div>
+    </section>
+
+    <div class="rule"></div>
+
+    <section class="section">
+      <div class="section-head">
+        <div><div class="eyebrow">Why Meta-ETA™</div><h2>Confidence without the burden of a date.</h2></div>
+        <p>For the gap between “when will it be done?” and “when will we know when it will be done?”</p>
+      </div>
+      <div class="competencies">
+        <article class="competency reveal"><div class="number mono">01 / META</div><h3>Meta-ETA™ generation</h3><p>The core deliverable: not the ETA, but the estimate of when the next estimate will be ready.</p></article>
+        <article class="competency reveal delay-1"><div class="number mono">02 / CONF</div><h3>Confidence in the confidence</h3><p>We measure our confidence in the Meta-ETA™, then Meta-ETA™ that confidence too. Turtles, but scheduled.</p></article>
+        <article class="competency reveal delay-2"><div class="number mono">03 / LOOP</div><h3>Recursive re-forecasting</h3><p>Each Meta-ETA™ politely schedules the next Meta-ETA™. The date always exists; its meaning stays out of scope.</p></article>
+        <article class="competency reveal delay-3"><div class="number mono">04 / SHAPE</div><h3>Date-shaped object</h3><p>A deliverable that looks exactly like a date — suitable for slides, framing and steering groups — minus the commitment.</p></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="model">
+        <div class="model-intro reveal">
+          <div class="eyebrow">The proprietary estimation architecture</div>
+          <h2>The Meta-ETA™ Confidence Ladder</h2>
+          <div class="formula">ETA → Meta-ETA™ → Meta-ETA™²<small>Each rung more confident on the surface and less committal underneath.</small></div>
+          <p>Ask for an ETA and you climb the ladder: directional-ish, plausible pending alignment, estimated estimate, and finally a Meta-ETA™ — with a Meta-ETA™ for the Meta-ETA™ available on request.</p>
+        </div>
+        <div class="steps">
+          <div class="step reveal"><div class="step-no">EM—01</div><div><h3>Estimate the estimate</h3><p>We do not estimate the work. We estimate when we could estimate it, and call that progress.</p><span class="tag">Meta-estimation</span></div></div>
+          <div class="step reveal delay-1"><div class="step-no">EM—02</div><div><h3>Calibrate the confidence</h3><p>We rate our confidence in the Meta-ETA™, then rate our confidence in that rating. Executive-ready either way.</p><span class="tag">Confidence²</span></div></div>
+          <div class="step reveal delay-2"><div class="step-no">EM—03</div><div><h3>Schedule the next Meta-ETA™</h3><p>Deliver the date-shaped object and automatically book the Meta-ETA™ for the Meta-ETA™. The loop never closes; the calendar never empties.</p><span class="tag">Recursive delivery</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0;">
+      <div class="section-head"><div><div class="eyebrow">The confidence ladder</div><h2>Every rung is a Meta-ETA™.</h2></div><p>Pick a level of certainty; we will phrase it as a date without becoming one.</p></div>
+      <div class="fleet reveal">
+        <span class="agent"><span class="dot"></span>Directional-ish</span>
+        <span class="agent"><span class="dot"></span>Plausible pending alignment</span>
+        <span class="agent"><span class="dot"></span>Estimated estimate</span>
+        <span class="agent"><span class="dot"></span>Meta-ETA™ (you are here)</span>
+        <span class="agent"><span class="dot"></span>Meta-ETA™ for the Meta-ETA™</span>
+        <span class="agent"><span class="dot"></span>Probably after the next sync</span>
+      </div>
+    </section>
+
+    <div class="quote-band reveal">
+      <blockquote>“The Meta-ETA™ is on track. <span>The thing it estimates remains a mystery.</span>”</blockquote>
+      <div class="quote-by mono">— M2 Fufffel ETA Estimating Service · Meta-ETA™ status report</div>
+    </div>
+
+    <p class="disclaimer reveal"><strong>Disclaimer.</strong> Fictional satire, not a real estimation method and not
+    project, financial or delivery advice. A Meta-ETA™ is not a commitment, a plan, or a date you should act on. For
+    real forecasting, use real data and real accountability.</p>
+
+    <section class="section" style="padding-top:0;">
+      <div class="section-head"><div><div class="eyebrow">Selected engagement tiers</div><h2>Get your Meta-ETA™.</h2></div><p>Every tier returns a Meta-ETA™, never an actual date.</p></div>
+      <div class="offers">
+        <article class="offer reveal"><div><div class="label">01 · single</div><h3>Single Meta-ETA™</h3><p>One date-shaped object for one deliverable. Looks committal in a slide; isn’t, in reality.</p></div><div class="offer-footer">OUTPUT: a Meta-ETA™</div></article>
+        <article class="offer reveal delay-1"><div><div class="label">02 · ladder</div><h3>Confidence Ladder Package</h3><p>All six rungs, from directional-ish to after-the-next-sync, so stakeholders can choose their own certainty.</p></div><div class="offer-footer">OUTPUT: Meta-ETA™ for the Meta-ETA™</div></article>
+        <article class="offer reveal delay-2"><div><div class="label">03 · retainer</div><h3>Meta-ETA™-as-a-Service</h3><p>Continuous re-forecasting. Each Meta-ETA™ schedules the next, so a fresh date always exists on demand.</p></div><div class="offer-footer">OUTPUT: perpetual forecast</div></article>
+      </div>
+    </section>
+
+    <section class="cta reveal">
+      <div><div class="eyebrow" style="color:var(--artifact-primary-brand);">Engagement trigger</div><h2>You ask for an ETA. We deliver a Meta-ETA™ — and a Meta-ETA™ for the next one.</h2><p>Book a 30-minute estimation session. You’ll leave with a confident, framable, entirely non-committal date-shaped object.</p></div>
+      <div class="seal">Meta-<br>ETA™<br>on time</div>
+    </section>
+
+    <footer class="footer"><span class="mono">M&amp;M Fufffel Consulting AB</span><span>Fictive company · Not a real offering · No deadlines were harmed, or met.</span></footer>
+  </main>
+</body>
+</html>
