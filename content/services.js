@@ -79,6 +79,44 @@
   /* ---- The service portfolio. Order = display order on the home grid. ---- */
   const SERVICES = [
     {
+      slug: "agentic-fufffel",
+      name: "Agentic Fufffel\u2122",
+      eyebrow: "Autonomous alignment fleet",
+      badge: "AI-NATIVE*",
+      headline: "One fleet of AI agents. Every service. Zero decisions required.",
+      description:
+        "Our flagship agentic layer: a self-orchestrating swarm of AI agents, one per capability, " +
+        "that runs the entire M&M Fufffel portfolio on your behalf \u2014 autonomously turning ambiguity " +
+        "into alignment while you stay comfortably out of the loop.",
+      accent: "#7ea2ff",
+      foundational: true,
+      // Chips linking to every capability this fleet "orchestrates".
+      orchestrates: [
+        "convincing-nonsense", "m2-decision-model", "osg-slide-generating-service",
+        "union-alignment-nonsense-engine", "eta-estimating-service", "meta-eta",
+        "dark-cloud-navigator", "inner-excellence-realignment", "afterwork", "coffee-mug-service",
+      ],
+      modules: [
+        { h: "Multi-agent orchestration", p: "One agent per service, each confidently sub-tasking the others until a deck emerges." },
+        { h: "Human-out-of-the-loop\u2122", p: "You approve nothing. The agents align among themselves and report consensus as fact." },
+        { h: "Self-healing narrative", p: "When an agent hallucinates, a second agent reframes it as an emerging insight. Uptime: eternal." },
+      ],
+      formula: "agents \u00d7 (every service) \u00d7 autonomy \u00f7 oversight = one confident, self-approving roadmap",
+      points: [
+        "Agentic. Orchestrated. Reality-optional.",
+        "It attends the meeting so you can attend a different meeting.",
+        "Powered end-to-end by Convincing Nonsense\u2122, at machine speed.",
+      ],
+      quote: {
+        text: "We gave the agents a goal, an ambiguity and a budget. They gave us alignment and a follow-up sync.",
+        cite: "Agentic Fufffel\u2122 \u2014 launch narrative",
+      },
+      disclaimer:
+        "Fictional satire, not a real AI product. These \u201cagents\u201d do not exist, make no decisions, and " +
+        "should never be trusted with yours. Do not deploy autonomous nonsense in production.",
+    },
+
+    {
       slug: "convincing-nonsense",
       name: "Convincing Nonsense\u2122",
       eyebrow: "Foundational capability",
@@ -342,6 +380,15 @@
   /* ---- "Some of our work": real onepagers delivered to (delighted) clients. ---- */
   /* Each has a cover image (a PDF page preview) and links to the full PDF.        */
   const WORK = [
+    {
+      title: "Agentic Fufffel\u2122",
+      client: "For an enterprise that wanted AI to run the whole thing",
+      blurb: "One fleet of AI agents, one per service, aligning among themselves and reporting consensus as fact. We delivered a self-approving roadmap and a recurring sync no human booked.",
+      cover: "assets/work/work-agentic-fufffel.jpg",
+      pdf: "assets/pdf/agentic-fufffel.pdf",
+      service: "agentic-fufffel",
+      accent: "#7ea2ff",
+    },
     {
       title: "Inner Excellence Realignment\u2122",
       client: "For a high performer who needed a personal roadmap",

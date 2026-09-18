@@ -265,6 +265,18 @@
       left += '<h3 class="mt-3">Confidence ladder</h3>' + ladderBlock(s.ladder);
     }
     left += pointsBlock(s.points);
+    if (s.orchestrates && s.orchestrates.length) {
+      left += '<h3 class="mt-3">Every service, orchestrated</h3>' +
+        '<p class="lede" style="font-size:0.95rem">One agent per capability. The fleet runs them all so you don\u2019t have to.</p>' +
+        '<div class="orchestrates">' +
+        s.orchestrates.map(function (slug) {
+          var t = byId[slug];
+          if (!t) return "";
+          return '<a class="orch-chip" href="#/service/' + esc(slug) + '" style="--accent:' +
+            esc(t.accent) + '">' + esc(t.name) + "</a>";
+        }).join("") +
+        "</div>";
+    }
     if (s.isMugWall) left += mugWall();
     left += disclaimerBlock(s.disclaimer);
 

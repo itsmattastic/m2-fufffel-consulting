@@ -730,6 +730,33 @@ dialog.panel::backdrop { background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(3
 .showcase figcaption { padding: 1rem 1.2rem; color: var(--ink-muted); font-size: 0.92rem; }
 .showcase figcaption strong { color: var(--ink); }
 
+/* ---- Agentic Fufffel: orchestrated-capability chips ---- */
+.orchestrates { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.6rem; }
+.orch-chip {
+  --accent: var(--blue-bright);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  background: var(--bg-elev);
+  color: var(--ink-muted);
+  font-size: 0.86rem;
+  transition: color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+.orch-chip::before {
+  content: "";
+  width: 0.55em; height: 0.55em; border-radius: 50%;
+  background: var(--accent);
+}
+.orch-chip:hover,
+.orch-chip:focus-visible {
+  color: var(--ink);
+  border-color: color-mix(in srgb, var(--accent) 60%, var(--border));
+  transform: translateY(-1px);
+}
+
 /* ---- Print / PDF: keep the dark canvas ---- */
 @media print {
   :root { --maxw: 100%; }
