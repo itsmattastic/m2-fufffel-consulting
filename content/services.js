@@ -95,7 +95,7 @@
         "convincing-nonsense", "m2-decision-model", "osg-slide-generating-service",
         "union-alignment-nonsense-engine", "eta-estimating-service", "meta-eta",
         "dark-cloud-navigator", "inner-excellence-realignment", "afterwork", "coffee-mug-service",
-        "m2-poking-service", "heard-and-seen",
+        "m2-poking-service", "heard-and-seen", "m2-comeback",
       ],
       modules: [
         { h: "Multi-agent orchestration", p: "One agent per service, each confidently sub-tasking the others until a deck emerges." },
@@ -446,11 +446,52 @@
         "Fictional satire \u2014 not real communication, relationship or workplace advice. Please actually " +
         "listen to your colleagues; people deserve genuine attention, not Convincing Nonsense\u2122.",
     },
+
+    {
+      slug: "m2-comeback",
+      name: "M\u00b2 Comeback\u2122",
+      eyebrow: "Recovery & return-to-form",
+      badge: "TRADEMARK PENDING*",
+      headline: "Sprained ankle or brain surgery \u2014 we\u2019ll get you sorted.",
+      description:
+        "Whatever knocked you off course, M\u00b2 Comeback\u2122 boosts you back with Convincing Nonsense\u2122 and " +
+        "a bundle of helpful (?) services \u2014 so you can concentrate on the important stuff, like coffee " +
+        "with interesting colleagues (the founders of M\u00b2 Consulting come highly recommended).",
+      accent: "#4fd1a5",
+      modules: [
+        { h: "Convincing Nonsense\u2122 boost", p: "A confident recovery narrative applied at any severity: \u201cyou\u2019re basically back already.\u201d Reality-optional, morale-positive." },
+        { h: "Helpful (?) service bundle", p: "ETAs for your recovery, slides about your progress, and gentle poking of anyone who doubts your comeback." },
+        { h: "Coffee-first prioritisation", p: "We handle the boring recovery admin so your calendar clears for the truly restorative work: coffee with interesting people." },
+      ],
+      formula: "comeback = (any setback \u00d7 Convincing Nonsense\u2122) \u00f7 time you\u2019d rather spend on coffee",
+      points: [
+        "Same great you. Now with a recovery narrative and a fresh mug.",
+        "From sprained ankle to brain surgery \u2014 one confident comeback plan.",
+        "You focus on coffee with the founders; we focus on the boost.",
+      ],
+      quote: {
+        text: "They said full recovery in six weeks. M\u00b2 Comeback\u2122 had me feeling back in one confident slide.",
+        cite: "M\u00b2 Comeback\u2122 \u2014 delighted returnee",
+      },
+      disclaimer:
+        "Fictional satire \u2014 absolutely not medical, health, rehabilitation or recovery advice, and no " +
+        "substitute for real care. Convincing Nonsense\u2122 heals nothing. For actual injuries or surgery, " +
+        "follow your real doctors and physiotherapists.",
+    },
   ];
 
   /* ---- "Some of our work": real onepagers delivered to (delighted) clients. ---- */
   /* Each has a cover image (a PDF page preview) and links to the full PDF.        */
   const WORK = [
+    {
+      title: "M\u00b2 Comeback\u2122",
+      client: "For a client returning from a serious setback",
+      blurb: "Sprained ankle or brain surgery \u2014 we boosted them back with Convincing Nonsense\u2122 and the helpful (?) bundle, cleared the recovery admin, and got them to coffee with the founders.",
+      cover: "assets/work/work-comeback.jpg",
+      pdf: "assets/pdf/comeback.pdf",
+      service: "m2-comeback",
+      accent: "#4fd1a5",
+    },
     {
       title: "Heard & Seen\u2122",
       client: "For an exec drowning in over-communication",
