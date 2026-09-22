@@ -95,7 +95,7 @@
         "convincing-nonsense", "m2-decision-model", "osg-slide-generating-service",
         "union-alignment-nonsense-engine", "eta-estimating-service", "meta-eta",
         "dark-cloud-navigator", "inner-excellence-realignment", "afterwork", "coffee-mug-service",
-        "m2-poking-service", "heard-and-seen", "m2-comeback",
+        "m2-poking-service", "heard-and-seen", "m2-comeback", "grand-unified-governance",
       ],
       modules: [
         { h: "Multi-agent orchestration", p: "One agent per service, each confidently sub-tasking the others until a deck emerges." },
@@ -478,11 +478,58 @@
         "substitute for real care. Convincing Nonsense\u2122 heals nothing. For actual injuries or surgery, " +
         "follow your real doctors and physiotherapists.",
     },
+
+    {
+      slug: "grand-unified-governance",
+      name: "Grand Unified Pool Governance\u2122",
+      eyebrow: "Strategy & governance",
+      badge: "TRADEMARK PENDING*",
+      headline: "Every requirement, from everyone, rendered gloriously ungraspable.",
+      description:
+        "The capacity-strategy capstone: we gather every dynamic-pool and static-pool requirement from " +
+        "every user across the entire company, then apply Convincing Nonsense\u2122, Meta-ETA\u2122 and the " +
+        "Dark Cloud Navigator\u2122 to produce a strategy so comprehensive nobody can grasp it \u2014 but the " +
+        "slides make everyone feel deeply reassured.",
+      accent: "#b08bff",
+      foundational: true,
+      // Pulls the reassurance-generating services together into one governance layer.
+      orchestrates: [
+        "convincing-nonsense", "meta-eta", "dark-cloud-navigator",
+        "osg-slide-generating-service", "m2-decision-model", "union-alignment-nonsense-engine",
+      ],
+      modules: [
+        { h: "Total requirement ingestion", p: "Dynamic pools, static pools, half-pools, hypothetical pools \u2014 we collect every requirement from every user, then never say no to any of them." },
+        { h: "Strategy fog synthesis", p: "Convincing Nonsense\u2122 + Meta-ETA\u2122 + Dark Cloud Navigator\u2122 blend the requirements into one weather-shaped strategy no single human can hold in their head." },
+        { h: "Reassurance-grade slides", p: "The output nobody understands, presented so confidently that the steering group applauds and asks no follow-up questions." },
+      ],
+      formula: "governance = (all requirements \u00d7 Convincing Nonsense\u2122 \u00d7 Meta-ETA\u2122) \u00f7 anyone\u2019s ability to grasp it",
+      points: [
+        "Dynamic pools, static pools, and the strategy in between \u2014 unified into one ungraspable whole.",
+        "Nobody can follow it. Everybody feels reassured. This is governance.",
+        "Powered by Convincing Nonsense\u2122; forecast by Meta-ETA\u2122; navigated by Dark Cloud Navigator\u2122.",
+      ],
+      quote: {
+        text: "I don\u2019t understand our pool strategy at all now, and I have never felt more confident about it.",
+        cite: "Grand Unified Pool Governance\u2122 \u2014 reassured steering group",
+      },
+      disclaimer:
+        "Fictional satire \u2014 not real capacity planning, strategy or governance advice. Real pool strategy " +
+        "needs clear requirements and decisions people can actually understand, not Convincing Nonsense\u2122.",
+    },
   ];
 
   /* ---- "Some of our work": real onepagers delivered to (delighted) clients. ---- */
   /* Each has a cover image (a PDF page preview) and links to the full PDF.        */
   const WORK = [
+    {
+      title: "Grand Unified Pool Governance\u2122",
+      client: "For a company unsure of its dynamic vs static pool strategy",
+      blurb: "We gathered every pool requirement from every user, blended it with Convincing Nonsense\u2122, Meta-ETA\u2122 and Dark Cloud Navigator\u2122, and produced a strategy nobody could grasp \u2014 and a deck that had the steering group applauding.",
+      cover: "assets/work/work-governance.jpg",
+      pdf: "assets/pdf/governance.pdf",
+      service: "grand-unified-governance",
+      accent: "#b08bff",
+    },
     {
       title: "M\u00b2 Comeback\u2122",
       client: "For a client returning from a serious setback",

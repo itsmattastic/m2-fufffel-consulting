@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M&amp;M Fufffel Consulting AB — Grand Unified Pool Governance™ Onepager</title>
+  <style>
+    :root {
+      --artifact-background: #ffffff;
+      --artifact-background-light: #f1f3f6;
+      --artifact-border-light: #e3e6ec;
+      --artifact-border-dark: #cdd2db;
+      --artifact-primary-brand: #3559e6;
+      --artifact-primary-highlight: #0d0f14;
+      --artifact-text-primary: #11141a;
+      --artifact-text-secondary: #5c6470;
+      --artifact-text-highlight: #e8eefc;
+      --artifact-warning-background: #fff3df;
+      --artifact-warning: #a96600;
+      --artifact-ink-soft: #2f3540;
+    }
+    /* Blue-led dark theme, matching the M² Fufffel logo. */
+    html[data-theme='dark'] {
+      --artifact-background: #080c16;
+      --artifact-background-light: #0f1524;
+      --artifact-border-light: #232a3d;
+      --artifact-border-dark: #333c54;
+      --artifact-primary-brand: #7ea2ff;
+      --artifact-primary-highlight: #eef1f8;
+      --artifact-text-primary: #eef1f8;
+      --artifact-text-secondary: #9aa3ba;
+      --artifact-text-highlight: #14213d;
+      --artifact-warning-background: #2a2112;
+      --artifact-warning: #f1bb63;
+      --artifact-ink-soft: #d8dce4;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; background: var(--artifact-background); color: var(--artifact-text-primary);
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 16px; line-height: 1.6; letter-spacing: -0.005em;
+    }
+    a { color: var(--artifact-primary-brand); text-decoration: none; }
+    .shell { max-width: 1120px; margin: 0 auto; padding: 28px 28px 72px; }
+    .eyebrow, .mono, .label, th {
+      font-family: "SF Mono", "IBM Plex Mono", "Cascadia Code", "Consolas", monospace;
+      font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
+      color: var(--artifact-text-secondary);
+    }
+    h1, h2, h3, .display { margin: 0; font-weight: 400; line-height: 1.04; letter-spacing: -.03em; color: var(--artifact-text-primary); }
+    h1 { font-size: clamp(3.2rem, 8vw, 7.6rem); font-weight: 300; }
+    h2 { font-size: clamp(2rem, 4vw, 3.8rem); font-weight: 300; }
+    h3 { font-size: 1.35rem; font-weight: 500; }
+    p { margin: 0; color: var(--artifact-text-secondary); }
+
+    .topline { display: flex; justify-content: space-between; align-items: center; padding-bottom: 18px; border-bottom: 1px solid var(--artifact-border-light); }
+    .brandmark { display: inline-flex; align-items: center; gap: 10px; color: var(--artifact-text-primary); }
+    .mark { display: grid; place-items: center; width: 34px; height: 34px; background: var(--artifact-primary-brand); color: var(--artifact-background); border-radius: 50%; font-weight: 700; letter-spacing: -.08em; }
+    .status { display: inline-flex; align-items: center; gap: 8px; }
+    .status-dot { width: 7px; height: 7px; border-radius: 50%; background: #46d39a; }
+
+    .hero { padding: 86px 0 78px; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(280px, .7fr); gap: 48px; align-items: end; }
+    .hero h1 { max-width: 860px; }
+    .hero h1 em { font-style: normal; color: var(--artifact-primary-brand); }
+    .hero-copy { max-width: 590px; margin-top: 28px; font-size: 1.14rem; }
+    .hero-copy strong { color: var(--artifact-text-primary); font-weight: 600; }
+    .hero-note { padding: 22px; border: 1px solid var(--artifact-border-dark); background: var(--artifact-background-light); border-radius: 8px; }
+    .hero-note .big { font-size: 2.8rem; line-height: 1; font-weight: 300; letter-spacing: -.05em; color: var(--artifact-primary-brand); }
+    .hero-note p { margin-top: 12px; font-size: .93rem; }
+
+    .rule { height: 1px; background: var(--artifact-border-light); }
+    .section { padding: 72px 0; }
+    .section-head { display: flex; justify-content: space-between; gap: 24px; align-items: end; margin-bottom: 30px; }
+    .section-head p { max-width: 430px; font-size: .96rem; }
+
+    .competencies { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--artifact-border-dark); border-bottom: 1px solid var(--artifact-border-dark); }
+    .competency { padding: 24px 20px 26px 0; margin-right: 20px; border-right: 1px solid var(--artifact-border-light); }
+    .competency:last-child { border-right: 0; margin-right: 0; }
+    .competency h3 { margin: 12px 0 8px; }
+    .competency p { font-size: .92rem; }
+    .number { color: var(--artifact-primary-brand); font-size: 1rem; }
+
+    .model { display: grid; grid-template-columns: 1fr 1.15fr; gap: 52px; align-items: start; }
+    .model-intro { max-width: 420px; }
+    .model-intro .formula { margin: 34px 0 20px; font-size: clamp(2.4rem, 5.5vw, 4.6rem); line-height: .92; letter-spacing: -.05em; font-weight: 300; color: var(--artifact-primary-brand); }
+    .model-intro .formula small { display: block; margin-top: 14px; font-size: .78rem; line-height: 1.35; letter-spacing: .04em; color: var(--artifact-text-secondary); }
+    .steps { border-top: 1px solid var(--artifact-border-dark); }
+    .step { display: grid; grid-template-columns: 60px 1fr; gap: 18px; padding: 20px 0; border-bottom: 1px solid var(--artifact-border-light); }
+    .step-no { color: var(--artifact-primary-brand); font-family: "SF Mono", monospace; font-size: .85rem; }
+    .step h3 { font-size: 1.1rem; margin-bottom: 4px; }
+    .step p { font-size: .92rem; }
+    .step .tag { display: inline-block; margin-top: 10px; padding: 4px 7px; border-radius: 4px; background: var(--artifact-warning-background); color: var(--artifact-warning); font-family: "SF Mono", monospace; font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; }
+
+    .fleet { display: flex; flex-wrap: wrap; gap: 8px; }
+    .agent { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border: 1px solid var(--artifact-border-dark); border-radius: 999px; background: var(--artifact-background-light); font-size: .86rem; color: var(--artifact-text-primary); }
+    .agent .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--artifact-primary-brand); }
+
+    .offers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .offer { min-height: 220px; padding: 24px; border: 1px solid var(--artifact-border-light); background: var(--artifact-background-light); border-radius: 8px; display: flex; flex-direction: column; justify-content: space-between; }
+    .offer:nth-child(2) { background: var(--artifact-text-highlight); border-color: var(--artifact-primary-brand); }
+    .offer h3 { max-width: 240px; margin: 24px 0 12px; }
+    .offer p { font-size: .9rem; }
+    .offer-footer { padding-top: 18px; font-family: "SF Mono", monospace; font-size: .72rem; color: var(--artifact-text-secondary); }
+
+    .quote-band { margin: 0 0 46px; padding: 42px 0; border-top: 1px solid var(--artifact-border-dark); border-bottom: 1px solid var(--artifact-border-dark); }
+    blockquote { margin: 0; max-width: 900px; font-size: clamp(1.7rem, 3.6vw, 3.1rem); font-weight: 300; line-height: 1.08; letter-spacing: -.04em; color: var(--artifact-text-primary); }
+    blockquote span { color: var(--artifact-primary-brand); }
+    .quote-by { margin-top: 18px; }
+
+    .disclaimer { margin: 0 0 46px; padding: 16px 18px; border: 1px solid var(--artifact-warning); background: var(--artifact-warning-background); color: var(--artifact-warning); border-radius: 8px; font-size: .86rem; }
+    .disclaimer strong { color: var(--artifact-warning); }
+
+    .cta { display: flex; justify-content: space-between; gap: 30px; align-items: end; padding: 36px; background: var(--artifact-primary-highlight); color: var(--artifact-background); border-radius: 8px; }
+    .cta h2 { color: var(--artifact-background); max-width: 650px; }
+    .cta p { color: var(--artifact-ink-soft); max-width: 470px; margin-top: 14px; }
+    .cta .seal { flex: 0 0 auto; width: 132px; height: 132px; border: 1px solid var(--artifact-primary-brand); border-radius: 50%; display: grid; place-items: center; text-align: center; color: var(--artifact-primary-brand); font-family: "SF Mono", monospace; font-size: .7rem; line-height: 1.4; letter-spacing: .08em; text-transform: uppercase; transform: rotate(-8deg); background: var(--artifact-background); }
+    .footer { display: flex; justify-content: space-between; gap: 20px; padding-top: 24px; color: var(--artifact-text-secondary); font-size: .78rem; }
+
+    .reveal { opacity: 0; transform: translateY(14px); animation: rise .65s ease forwards; }
+    .delay-1 { animation-delay: .08s; } .delay-2 { animation-delay: .16s; } .delay-3 { animation-delay: .24s; }
+    @keyframes rise { to { opacity: 1; transform: none; } }
+    @media (prefers-reduced-motion: reduce) { .reveal { animation: none; opacity: 1; transform: none; } }
+
+    @media (max-width: 760px) {
+      .shell { padding: 22px 18px 56px; }
+      .hero { padding: 58px 0 56px; }
+      .hero-grid, .model { grid-template-columns: 1fr; gap: 30px; }
+      .competencies, .offers { grid-template-columns: 1fr 1fr; }
+      .competency:nth-child(2) { border-right: 0; }
+      .competency:nth-child(n+3) { border-top: 1px solid var(--artifact-border-light); }
+      .cta { align-items: start; flex-direction: column; }
+      .footer { flex-direction: column; }
+    }
+    @media (max-width: 460px) { h1 { font-size: 3.35rem; } .competencies, .offers { grid-template-columns: 1fr; } .competency { margin-right: 0; padding-right: 0; border-right: 0; } .competency + .competency { border-top: 1px solid var(--artifact-border-light); } .offer { min-height: 0; } }
+
+    @media print {
+      html, body { background: var(--artifact-background) !important; }
+      body { margin: 0; padding: .4in .6in; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      .shell { max-width: 100% !important; width: 100% !important; padding: 0; }
+      section, .hero, .header { break-inside: avoid; margin-bottom: 20px !important; }
+      .hero { padding: 44px 0 36px; } .section { padding: 34px 0; }
+      .offer, .hero-note, .cta, .disclaimer { break-inside: avoid; box-shadow: none !important; }
+      .competencies, .offers { gap: 10px !important; }
+      .reveal { opacity: 1; transform: none; animation: none; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="topline reveal">
+      <div class="brandmark"><span class="mark">M²</span><span class="mono">M&amp;M Fufffel Consulting AB</span></div>
+      <div class="status mono"><span class="status-dot"></span> Fictive since 2026 · reassuringly ungraspable</div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="reveal delay-1">
+          <div class="eyebrow">Strategy &amp; governance · capacity planning · plausible control</div>
+          <h1>Every requirement, from everyone, rendered <em>gloriously ungraspable</em>.</h1>
+          <p class="hero-copy">Grand Unified Pool Governance™ is the capacity-strategy capstone: we gather every
+          dynamic-pool and static-pool requirement from every user across the whole company, then apply
+          <strong>Convincing Nonsense™</strong>, Meta-ETA™ and the Dark Cloud Navigator™ to produce a strategy so
+          comprehensive nobody can grasp it — but the slides make everyone feel deeply reassured.</p>
+        </div>
+        <aside class="hero-note reveal delay-2">
+          <div class="label">Core proposition</div>
+          <div class="big">All in.<br>None grasped.<br>All reassured.</div>
+          <p>Dynamic pools, static pools, and the strategy in between — unified into one confident, incomprehensible whole.</p>
+        </aside>
+      </div>
+    </section>
+
+    <div class="rule"></div>
+
+    <section class="section">
+      <div class="section-head">
+        <div><div class="eyebrow">Why unify, why now</div><h2>Clarity is overrated. Reassurance scales.</h2></div>
+        <p>For the gap between “users should come with requirements” and “what is our pool strategy, exactly?”</p>
+      </div>
+      <div class="competencies">
+        <article class="competency reveal"><div class="number mono">01 / INGEST</div><h3>Total requirement ingestion</h3><p>Dynamic pools, static pools, half-pools, hypothetical pools — every requirement from every user, collected and never refused.</p></article>
+        <article class="competency reveal delay-1"><div class="number mono">02 / FOG</div><h3>Strategy fog synthesis</h3><p>Convincing Nonsense™ + Meta-ETA™ + Dark Cloud Navigator™ blend it into one weather-shaped strategy no single human can hold in their head.</p></article>
+        <article class="competency reveal delay-2"><div class="number mono">03 / GOVERN</div><h3>Governance theatre</h3><p>Steering groups, RACI charts and decision gates that look rigorous and commit to nothing in particular.</p></article>
+        <article class="competency reveal delay-3"><div class="number mono">04 / REASSURE</div><h3>Reassurance-grade slides</h3><p>The output nobody understands, presented so confidently the room applauds and asks no follow-up questions.</p></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="model">
+        <div class="model-intro reveal">
+          <div class="eyebrow">The proprietary governance architecture</div>
+          <h2>The Grand Unified Pool Model™</h2>
+          <div class="formula">all requirements ÷ graspability<small>Everyone’s needs in; one confident, incomprehensible strategy out.</small></div>
+          <p>Every dynamic and static pool requirement across the company converges into a single strategy so total that no individual can summarise it — which is precisely what makes it feel authoritative.</p>
+        </div>
+        <div class="steps">
+          <div class="step reveal"><div class="step-no">GU—01</div><div><h3>Gather everything</h3><p>Collect every pool requirement from every user, everywhere. Say yes to all of them. Reconcile none of them.</p><span class="tag">Total intake</span></div></div>
+          <div class="step reveal delay-1"><div class="step-no">GU—02</div><div><h3>Apply the fog</h3><p>Run it through Convincing Nonsense™, forecast it with Meta-ETA™, and navigate it with Dark Cloud Navigator™.</p><span class="tag">Strategic haze</span></div></div>
+          <div class="step reveal delay-2"><div class="step-no">GU—03</div><div><h3>Present, reassuringly</h3><p>Compress the ungraspable whole into slides so confident the steering group feels in complete control of something they cannot describe.</p><span class="tag">Governance theatre</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0;">
+      <div class="section-head"><div><div class="eyebrow">Powered by</div><h2>The reassurance stack.</h2></div><p>The services we blend into one ungraspable governance layer.</p></div>
+      <div class="fleet reveal">
+        <span class="agent"><span class="dot"></span>Convincing Nonsense™</span>
+        <span class="agent"><span class="dot"></span>Meta-ETA™</span>
+        <span class="agent"><span class="dot"></span>Dark Cloud Navigator™</span>
+        <span class="agent"><span class="dot"></span>OSG Slide Generating Service</span>
+        <span class="agent"><span class="dot"></span>M² Decision Model</span>
+        <span class="agent"><span class="dot"></span>Union Alignment Nonsense Engine™</span>
+      </div>
+    </section>
+
+    <div class="quote-band reveal">
+      <blockquote>“I don’t understand our pool strategy at all now, and I have <span>never felt more confident</span> about it.”</blockquote>
+      <div class="quote-by mono">— Grand Unified Pool Governance™ · reassured steering group</div>
+    </div>
+
+    <p class="disclaimer reveal"><strong>Disclaimer.</strong> Fictional satire — not real capacity planning, strategy or
+    governance advice. Real pool strategy needs clear requirements and decisions people can actually understand, not
+    Convincing Nonsense™.</p>
+
+    <section class="section" style="padding-top:0;">
+      <div class="section-head"><div><div class="eyebrow">Selected engagement tiers</div><h2>Unify your pools. Reassure your org.</h2></div><p>Every tier ends with a deck nobody can question and everybody applauds.</p></div>
+      <div class="offers">
+        <article class="offer reveal"><div><div class="label">01 · intake</div><h3>Requirement Round-Up</h3><p>We collect every dynamic- and static-pool requirement from every user. No prioritisation, no refusals, no judgement.</p></div><div class="offer-footer">OUTPUT: an infinite backlog</div></article>
+        <article class="offer reveal delay-1"><div><div class="label">02 · unify</div><h3>Grand Unified Pool Model™</h3><p>The full blend — Convincing Nonsense™, Meta-ETA™ and Dark Cloud Navigator™ — into one ungraspable strategy.</p></div><div class="offer-footer">OUTPUT: a strategy-shaped fog</div></article>
+        <article class="offer reveal delay-2"><div><div class="label">03 · retainer</div><h3>Governance-as-a-Service</h3><p>Standing steering groups, refreshed reassurance decks, and perpetual strategy that never resolves and never alarms.</p></div><div class="offer-footer">OUTPUT: eternal reassurance</div></article>
+      </div>
+    </section>
+
+    <section class="cta reveal">
+      <div><div class="eyebrow" style="color:var(--artifact-primary-brand);">Engagement trigger</div><h2>You bring every requirement. We bring the fog, the slides and the standing ovation.</h2><p>Book a 30-minute governance session — you’ll leave reassured, aligned, and entirely unable to explain why.</p></div>
+      <div class="seal">100%<br>reassured<br>0% grasped</div>
+    </section>
+
+    <footer class="footer"><span class="mono">M&amp;M Fufffel Consulting AB</span><span>Fictive company · Not a real offering · No strategy was actually understood.</span></footer>
+  </main>
+</body>
+</html>
