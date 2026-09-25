@@ -74,6 +74,11 @@
     "Please escalate responsibly.",
     "F-model compliant-ish.",
     "No facts were harmed in this decision.",
+    "Let\u2019s take this offline. And then to another meeting.",
+    "Great catchup \u2014 let\u2019s schedule a catchup about it.",
+    "My network has a network.",
+    "This coffee could have been a slide.",
+    "Recursively yours.",
   ];
 
   /* ---- The service portfolio. Order = display order on the home grid. ---- */
@@ -366,6 +371,38 @@
     },
 
     {
+      slug: "recursive-networking",
+      name: "Recursive Networking\u2122",
+      eyebrow: "Connection-as-a-Service",
+      badge: "TRADEMARK PENDING*",
+      headline: "We put people together to talk. About putting more people together to talk.",
+      description:
+        "The convenient alternative to real work: we introduce people who should meet, so they can " +
+        "meet, so they can decide to meet again \u2014 with more people. Every conversation produces slides, " +
+        "the slides produce follow-up syncs, and the syncs produce the need for even more networking. " +
+        "Momentum without motion, powered by Convincing Nonsense\u2122 and served with a warm mug.",
+      accent: "#59c3ff",
+      modules: [
+        { h: "Curated introductions", p: "We connect the people who really should talk \u2014 chosen for reach, never relevance \u2014 then step back and let the alignment ambience build itself." },
+        { h: "Slide-generating conversations", p: "Every coffee produces a takeaway, every takeaway a slide, every slide a reason to reconvene the group that produced it." },
+        { h: "Recursive follow-up engine", p: "The output of each networking meeting is another networking meeting. The graph only grows; nobody is ever left un-networked." },
+      ],
+      formula: "network(you) = coffee \u00d7 people \u00d7 slides \u00f7 outcomes \u2192 network(everyone they know)",
+      points: [
+        "Recursive by design: each meeting schedules the meeting that schedules the next meeting.",
+        "The convenient alternative to real work \u2014 now with 40% more contacts.",
+        "You leave energised, well-connected, and no closer to shipping anything.",
+      ],
+      quote: {
+        text: "We networked about the networking. Then we scheduled a workshop to align on the follow-up sync.",
+        cite: "Recursive Networking\u2122 \u2014 self-referential retrospective",
+      },
+      disclaimer:
+        "Fictional satire \u2014 not real networking, career or business-development advice. Genuine " +
+        "relationships are built by actually helping people, not by recursively scheduling coffee.",
+    },
+
+    {
       slug: "coffee-mug-service",
       name: "Coffee Mug Service",
       eyebrow: "Caffeine as a Service",
@@ -521,6 +558,15 @@
   /* ---- "Some of our work": real onepagers delivered to (delighted) clients. ---- */
   /* Each has a cover image (a PDF page preview) and links to the full PDF.        */
   const WORK = [
+    {
+      title: "Recursive Networking\u2122",
+      client: "For a team that wanted to connect before committing",
+      blurb: "We introduced the people who really should meet, captured every coffee as a slide, and let each meeting schedule the next \u2014 across a widening set of contacts. Warm, well-attended, and reliably self-perpetuating; no decision was reached.",
+      cover: "assets/work/work-recursive-networking.jpg",
+      pdf: "assets/pdf/recursive-networking.pdf",
+      service: "recursive-networking",
+      accent: "#59c3ff",
+    },
     {
       title: "Grand Unified Pool Governance\u2122",
       client: "For a company unsure of its dynamic vs static pool strategy",
