@@ -517,6 +517,38 @@
     },
 
     {
+      slug: "deal-dealer",
+      name: "Deal Dealer\u2122",
+      eyebrow: "Deals-as-a-Service",
+      badge: "TRADEMARK PENDING*",
+      headline: "You need a dealer? We make the deal.",
+      description:
+        "You need a dealer? We make the deal \u2014 even if you don\u2019t know what you need to have dealt, " +
+        "we will deal it for you. A full-service dealing layer that applies Convincing Nonsense\u2122 to " +
+        "whatever it is you\u2019re almost certain you probably wanted dealt, then deals it with conviction.",
+      accent: "#f0b64a",
+      modules: [
+        { h: "Need-free intake", p: "No requirement? No problem. We infer a deal-shaped need from your general air of wanting something handled, then proceed to deal it." },
+        { h: "The deal itself", p: "We make the deal. What the deal is, with whom, and on what terms stays comfortably out of scope \u2014 but rest assured, it has been dealt." },
+        { h: "Confident closure", p: "Every engagement closes with a firm handshake, an executive-ready deck, and the warm certainty that a deal has, in some sense, occurred." },
+      ],
+      formula: "deal = (you \u00d7 a vague need \u00d7 Convincing Nonsense\u2122) \u00f7 knowing what was dealt",
+      points: [
+        "Even if you don\u2019t know what you need dealt, we\u2019ll deal it.",
+        "The deal is always closed. The details are always emerging.",
+        "A dealer for the dealers who don\u2019t yet know they need a dealer.",
+      ],
+      quote: {
+        text: "I never found out what the deal was. But it was dealt, and I\u2019ve never felt more handled.",
+        cite: "Deal Dealer\u2122 \u2014 contentedly dealt-with client",
+      },
+      disclaimer:
+        "Fictional satire \u2014 not a real brokerage, dealership, trading, legal or financial service, and " +
+        "absolutely not advice to buy, sell or \u201cdeal\u201d anything. No real deals are made. For actual " +
+        "transactions, use real, regulated professionals.",
+    },
+
+    {
       slug: "grand-unified-governance",
       name: "Grand Unified Pool Governance\u2122",
       eyebrow: "Strategy & governance",
