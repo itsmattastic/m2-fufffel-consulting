@@ -585,6 +585,40 @@
         "Fictional satire \u2014 not real capacity planning, strategy or governance advice. Real pool strategy " +
         "needs clear requirements and decisions people can actually understand, not Convincing Nonsense\u2122.",
     },
+
+    {
+      slug: "assignment-alignment",
+      name: "Assignment Alignment\u2122",
+      eyebrow: "Tasking & placement",
+      badge: "TRADEMARK PENDING*",
+      headline: "We align the assignment with whoever is least likely to ask what it is.",
+      description:
+        "The quietly load-bearing service: whatever has been assigned \u2014 a task, a person, a team, a " +
+        "whole workstream \u2014 Assignment Alignment\u2122 applies Convincing Nonsense\u2122 to make it feel " +
+        "perfectly matched to its owner, its deadline and its purpose, without anyone confirming that " +
+        "any of those three things exist. The assignment stays assigned; the alignment stays aligned; " +
+        "the meaning stays, as ever, out of scope.",
+      accent: "#5bb8a0",
+      modules: [
+        { h: "Assignment-to-owner matching", p: "We pair every assignment with the colleague who will accept it most agreeably and question it least. Fit is measured in enthusiasm, never in suitability." },
+        { h: "Alignment surface generation", p: "We produce a reassuring layer of alignment around the assignment \u2014 a RACI-shaped diagram, a warm kickoff, a shared folder \u2014 so it looks owned, scoped and under way. It is none of these." },
+        { h: "Drift-proof reassignment", p: "When the assignment drifts (it will), we don\u2019t correct it \u2014 we realign everyone\u2019s understanding to wherever it drifted. The assignment is never wrong; the expectations simply catch up to it." },
+      ],
+      formula: "alignment = (any assignment \u00d7 a willing owner \u00d7 Convincing Nonsense\u2122) \u00f7 anyone checking what was assigned",
+      points: [
+        "Every assignment is perfectly aligned \u2014 to itself.",
+        "We don\u2019t ask \u2018who should do this?\u2019 We ask \u2018who will nod?\u2019",
+        "Scope, owner and deadline: pick none, feel aligned on all three.",
+      ],
+      quote: {
+        text: "I\u2019m not sure what I was assigned, but I\u2019ve never felt more aligned to it.",
+        cite: "Assignment Alignment\u2122 \u2014 confidently tasked team member",
+      },
+      disclaimer:
+        "Fictional satire \u2014 not real resource-management, staffing, HR or project-assignment advice. " +
+        "Real assignments need a real owner, a real scope and someone genuinely willing to say \u2018that\u2019s " +
+        "not mine.\u2019 Convincing Nonsense\u2122 assigns nothing.",
+    },
   ];
 
   /* ---- "Some of our work": real onepagers delivered to (delighted) clients. ---- */
