@@ -619,11 +619,53 @@
         "Real assignments need a real owner, a real scope and someone genuinely willing to say \u2018that\u2019s " +
         "not mine.\u2019 Convincing Nonsense\u2122 assigns nothing.",
     },
+
+    {
+      slug: "skunkworks-uplift",
+      name: "Skunkworks Uplift\u2122",
+      eyebrow: "Under-the-table enablement",
+      badge: "TRADEMARK PENDING*",
+      headline: "We boost newcomers in the shadows \u2014 so they excel in the light.",
+      description:
+        "The quietly load-bearing talent layer: off-the-books, under-the-table competence boosts that get " +
+        "newcomers excelling fast. We share the knowledge nobody wrote down, route the hard parts through " +
+        "the rest of the portfolio, and apply Convincing Nonsense\u2122 so stakeholders end up delighted \u2014 " +
+        "without ever quite knowing what they are delighted about. Pure skunk work, banked as future leverage.",
+      accent: "#8fd14f",
+      modules: [
+        { h: "Shadow knowledge transfer", p: "The undocumented tricks, the real owners, the shortcuts that actually work \u2014 passed quietly to the newcomer, off the record and off the roadmap." },
+        { h: "Stakeholder delight generation", p: "We route the confusing bits through Meta-ETA\u2122, OSG slides and Heard & Seen\u2122 until stakeholders feel reassured and pleased \u2014 about something they cannot name." },
+        { h: "Leverage banking", p: "Every quiet boost is logged as a favour owed. The uplift is invisible; the future leverage is very real, and it compounds." },
+      ],
+      formula: "leverage = (shared knowledge \u00d7 skunk work \u00d7 Convincing Nonsense\u2122) \u00f7 what stakeholders can name",
+      points: [
+        "Boost them in the shadows; take the credit in the light.",
+        "Stakeholders leave happy \u2014 about what, we respectfully decline to specify.",
+        "Today\u2019s quiet favour is tomorrow\u2019s immovable leverage.",
+      ],
+      quote: {
+        text: "Nobody knew we helped. Everybody was thrilled. We now own three roadmaps and a steering group.",
+        cite: "Skunkworks Uplift\u2122 \u2014 under-the-table retrospective",
+      },
+      disclaimer:
+        "Fictional satire \u2014 not real mentoring, onboarding, HR or talent-development advice, and not an " +
+        "endorsement of hidden agendas, back-channelling or manipulating stakeholders. Genuinely help " +
+        "newcomers out in the open; real competence is built transparently, not banked as leverage.",
+    },
   ];
 
   /* ---- "Some of our work": real onepagers delivered to (delighted) clients. ---- */
   /* Each has a cover image (a PDF page preview) and links to the full PDF.        */
   const WORK = [
+    {
+      title: "Skunkworks Uplift\u2122",
+      client: "For a team quietly boosting its newcomers",
+      blurb: "Off the books and off the roadmap, we passed the undocumented knowledge, routed the confusing parts through Meta-ETA\u2122, OSG slides and Heard & Seen\u2122, and left stakeholders delighted \u2014 about something they couldn\u2019t name. Banked as future leverage.",
+      cover: "assets/work/work-skunkworks-uplift.jpg",
+      pdf: "assets/pdf/skunkworks-uplift.pdf",
+      service: "skunkworks-uplift",
+      accent: "#8fd14f",
+    },
     {
       title: "Recursive Networking\u2122",
       client: "For a team that wanted to connect before committing",
