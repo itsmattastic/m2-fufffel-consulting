@@ -410,6 +410,16 @@ a { color: inherit; text-decoration: none; }
 }
 .quote figcaption { margin-top: 0.6rem; color: var(--ink-faint); font-size: 0.82rem; font-family: var(--mono); }
 
+/* detail page media (service mockup) */
+.detail__media {
+  margin: 0 0 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--bg-elev);
+}
+.detail__media img { display: block; width: 100%; height: auto; }
+
 /* points / ladders */
 .points { list-style: none; margin: 0.4rem 0 0; padding: 0; display: grid; gap: 0.4rem; }
 .points li {

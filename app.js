@@ -280,7 +280,13 @@
     if (s.isMugWall) left += mugWall();
     left += disclaimerBlock(s.disclaimer);
 
-    var right = quoteBlock(s.quote) +
+    var right = "";
+    if (s.image) {
+      right += '<figure class="detail__media">' +
+        '<img loading="lazy" src="' + esc(s.image) + '" alt="' + esc(s.name) + ' \u2014 mockup" />' +
+        "</figure>";
+    }
+    right += quoteBlock(s.quote) +
       '<div class="mt-2 stack">' +
         '<button class="btn btn--primary" data-open-cta style="width:100%">Request an alignment</button>' +
         '<a class="btn btn--ghost" href="#/" style="width:100%">Back to portfolio</a>' +
