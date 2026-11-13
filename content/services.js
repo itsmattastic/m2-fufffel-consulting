@@ -652,6 +652,39 @@
         "endorsement of hidden agendas, back-channelling or manipulating stakeholders. Genuinely help " +
         "newcomers out in the open; real competence is built transparently, not banked as leverage.",
     },
+
+    {
+      slug: "merch-by-m2-fufffel",
+      name: "Merch by M&M Fufffel",
+      eyebrow: "Giveaways-as-a-Service",
+      badge: "FICTIVE SERVICE",
+      headline: "Emphasise the nonsense \u2014 now in enamel, vinyl and ceramic.",
+      description:
+        "Merch by M&M Fufffel turns Convincing Nonsense\u2122 into things people can hold: enamel pins, " +
+        "die-cut stickers and the full Coffee Mug Service, engineered as giveaways that spread the message " +
+        "without anyone being able to name it. Each piece is on-brand, suspiciously on-message, and " +
+        "delivered warm \u2014 perfect desk candy for busy stakeholders who leave the booth delighted, aligned, " +
+        "and carrying a slogan they\u2019ll quote in the next meeting. Momentum, now with a lanyard.",
+      accent: "#6387d7",
+      image: "assets/merch-pins-stickers.jpg",
+      modules: [
+        { h: "Pin the workstream", p: "Enamel pins for every capability \u2014 M\u00b2 logo, Meta-ETA\u2122, Nonsense\u2122, Aligned (ish). Wear your alignment; let the lanyard do the escalating." },
+        { h: "Stick the nonsense", p: "Die-cut stickers engineered to migrate onto laptops, water bottles and whiteboards, spreading the message one surface at a time." },
+        { h: "Fuel the ambiguity", p: "The Coffee Mug Service, folded in: MugOps for the modern enterprise \u2014 caffeine and slogans delivered warm, uptime measured in refills." },
+      ],
+      points: [
+        "Giveaways that confuse and delight \u2014 ideally at the same time.",
+        "Perfect gifts for busy people. Plausible deniability included.",
+        "This meeting could have been a mug. Now it\u2019s also a pin.",
+      ],
+      quote: {
+        text: "I took a pin, a sticker and a mug. I\u2019m still not sure what we aligned on, but my laptop looks very strategic now.",
+        cite: "Merch by M&M Fufffel \u2014 delighted (and newly branded) stakeholder",
+      },
+      disclaimer:
+        "Fictional satire \u2014 not real merchandise, promotional or marketing advice. All slogans are invented " +
+        "nonsense and no giveaways are actually produced.",
+    },
   ];
 
   /* ---- "Some of our work": real onepagers delivered to (delighted) clients. ---- */
@@ -796,6 +829,13 @@
 
   /* ---- Merch showcase: what happy customers actually receive. ---- */
   const SHOWCASE = [
+    {
+      title: "Pins & Stickers",
+      tagline: "Pin the workstream. Stick the nonsense.",
+      note: "Enamel pins and die-cut stickers \u2014 M\u00b2 logo, Meta-ETA\u2122, Nonsense\u2122, Aligned (ish). Giveaways that confuse and delight, ideally at the same time.",
+      img: "assets/merch-pins-stickers.jpg",
+      alt: "M\u00b2 Fufffel enamel pins and die-cut stickers mockup with slogans like 'Good enough is a strategy' and 'Aligned (ish)'.",
+    },
     {
       title: "The Merch Kit",
       tagline: "Wear the workstream.",
